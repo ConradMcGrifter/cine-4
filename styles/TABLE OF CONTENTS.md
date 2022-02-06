@@ -10,6 +10,7 @@
 # OBJECTS
 
 -   site-grid...............grid for the website
+-   content.................holds the main content of the site
 
 # UTILS
 

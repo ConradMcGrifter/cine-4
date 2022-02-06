@@ -42,10 +42,25 @@ img {
 /* --------------------------------
         OBJECTS -> #site-grid
    -------------------------------- */
+.site-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10rem auto;
+      grid-template-rows: 10rem auto;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+/* --------------------------------
+        OBJECTS -> #content
+   -------------------------------- */
 /* --------------------------------
         COMPONENTS -> #movieCard
    -------------------------------- */
 /* --------------------------------
         COMPONENTS -> #header
    -------------------------------- */
+.header {
+  outline: solid red 2px;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,10 @@
 /* --------------------------------
         OBJECTS -> #site-grid
    -------------------------------- */
+
+// this grid holds the #header and #content elements
+.site-grid {
+    display: grid;
+    grid-template-rows: 10rem auto;
+    grid-template-columns: 1fr;
+}
