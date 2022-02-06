@@ -1,0 +1,20 @@
+/* --------------------------------
+        UTILS -> #variables
+   -------------------------------- */
+
+$colors: (
+    mainBG: #141414,
+    primaryText: #ffffff,
+    timesCardBG: #1a1919,
+    timeBG: #ffffff,
+    timeText: #000000,
+    dateBG: #c4c4c4,
+    dateText: #000000,
+    dateBG-active: #07c0e9,
+    dateText-active: #ffffff,
+);
+
+$max-width: 80rem;
+
+$header-fontStack: "Rowdies", sans-serif;
+$body-fontStack: "Roboto", arial;

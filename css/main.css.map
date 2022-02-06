@@ -1,12 +1,15 @@
 {
     "version": 3,
-    "mappings": "AIAA,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,UAAU;EACtB,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,CAAC;AACD,CAAC,AAAA,QAAQ;AACT,CAAC,AAAA,OAAO,CAAC;EACL,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;AAED,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,MAAM;CACpB",
+    "mappings": "AACA,OAAO,CAAC,qFAAI;AAGZ,OAAO,CAAC,oFAAI;ACJZ;;sCAEsC;ACFtC;;sCAEsC;ACFtC;;sCAEsC;ACFtC;;sCAEsC;AAEtC,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,UAAU;EACtB,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,CAAC;AACD,CAAC,AAAA,QAAQ;AACT,CAAC,AAAA,OAAO,CAAC;EACL,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;AAED,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,IAAI;EAChB,SAAS,EAAE,MAAM;EACjB,UAAU,EHhBF,OAAO;EGiBf,KAAK,EHhBQ,OAAO;CGiBvB;;AAED,AAAA,GAAG,CAAC;EACA,OAAO,EAAE,KAAK;CACjB;;AE3BD;;sCAEsC;ACFtC;;sCAEsC",
     "sources": [
         "../styles/main.scss",
         "../styles/utils/_variables.scss",
         "../styles/utils/_mixins.scss",
         "../styles/utils/_functions.scss",
-        "../styles/base/_base.scss"
+        "../styles/base/_base.scss",
+        "../styles/objects/_site-grid.scss",
+        "../styles/components/_movieCard.scss",
+        "../styles/components/_header.scss"
     ],
     "names": [],
     "file": "main.css"

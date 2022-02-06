@@ -7,7 +7,7 @@ let schedule = {
             mon: ["7:30"],
             tue: ["7:30"],
             wed: ["7:30"],
-            thu: [""],
+            thu: ["7:30"],
             fri: ["5:10", "7:30"],
             sat: ["12:30", "2:30", "5:10", "7:30"],
             sun: ["12:30", "2:30", "5:10", "7:30"],
@@ -15,16 +15,16 @@ let schedule = {
     },
     movie2: {
         title: "House of Gucci",
-        poster: undefined,
-        trailer: undefined,
+        poster: "posters/gucciPoster.jpg",
+        trailer: "https://www.youtube.com/watch?v=pGi3Bgn7U5U",
         showtimes: {
-            mon: [],
-            tue: [],
-            wed: [],
-            thu: [],
-            fri: [],
-            sat: [],
-            sun: [],
+            mon: ["7:30"],
+            tue: ["7:30"],
+            wed: ["7:30"],
+            thu: ["7:30"],
+            fri: ["5:10", "7:30"],
+            sat: ["12:30", "2:30", "5:10", "7:30"],
+            sun: ["12:30", "2:30", "5:10", "7:30"],
         },
     },
     movie3: {
@@ -32,13 +32,13 @@ let schedule = {
         poster: undefined,
         trailer: undefined,
         showtimes: {
-            mon: [],
-            tue: [],
-            wed: [],
-            thu: [],
-            fri: [],
-            sat: [],
-            sun: [],
+            mon: ["7:30"],
+            tue: ["7:30"],
+            wed: ["7:30"],
+            thu: ["7:30"],
+            fri: ["5:10", "7:30"],
+            sat: ["12:30", "2:30", "5:10", "7:30"],
+            sun: ["12:30", "2:30", "5:10", "7:30"],
         },
     },
     movie4: {
@@ -46,19 +46,19 @@ let schedule = {
         poster: undefined,
         trailer: undefined,
         showtimes: {
-            mon: [],
-            tue: [],
-            wed: [],
-            thu: [],
-            fri: [],
-            sat: [],
-            sun: [],
+            mon: ["7:30"],
+            tue: ["7:30"],
+            wed: ["7:30"],
+            thu: ["7:30"],
+            fri: ["5:10", "7:30"],
+            sat: ["12:30", "2:30", "5:10", "7:30"],
+            sun: ["12:30", "2:30", "5:10", "7:30"],
         },
     },
 };
 
-const printShowtimes1 = (film, day) => {
-    let movieTimes = schedule[film].showtimes[day];
+const printShowtimes1 = (movie, day) => {
+    let movieTimes = schedule[movie].showtimes[day];
     movieTimes.forEach((time) => {
         if (movieTimes == "") {
             console.log("shee");
@@ -68,4 +68,4 @@ const printShowtimes1 = (film, day) => {
     });
 };
 
-printShowtimes1("movie1", "fri");
+printShowtimes1("movie1", "sat");

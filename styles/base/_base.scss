@@ -1,3 +1,7 @@
+/* --------------------------------
+        BASE -> #base
+   -------------------------------- */
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -13,5 +17,12 @@ html {
 }
 
 body {
+    min-height: 100%;
     font-size: 1.8rem;
+    background: color(mainBG);
+    color: color(primaryText);
+}
+
+img {
+    display: block;
 }

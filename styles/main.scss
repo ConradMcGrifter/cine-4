@@ -1,2 +1,10 @@
+// Rowdies  font
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+// Roboto  font
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 @import "utils/variables", "utils/mixins", "utils/functions";
 @import "base/base";
+@import "objects/site-grid";
+@import "components/movieCard", "components/header";
