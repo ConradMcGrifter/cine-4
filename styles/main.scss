@@ -4,7 +4,14 @@
 // Roboto  font
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
+// utils
 @import "utils/variables", "utils/mixins", "utils/functions";
+
+// base
 @import "base/base";
+
+// objects
 @import "objects/site-grid", "objects/content";
+
+// components
 @import "components/movieCard", "components/header";
