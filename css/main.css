@@ -116,7 +116,7 @@ h3 {
 
 .card__poster {
   width: 100%;
-  max-width: 17rem;
+  max-width: 15rem;
   margin: auto 0;
 }
 
@@ -213,6 +213,35 @@ h3 {
         COMPONENTS -> #header
    -------------------------------- */
 .header {
-  outline: solid red 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2rem;
+}
+
+.header__nav {
+  max-width: 85rem;
+  width: 100%;
+}
+
+.header__logo {
+  font-size: 4rem;
+  color: #d13b3b;
+}
+
+.header__logo span {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */

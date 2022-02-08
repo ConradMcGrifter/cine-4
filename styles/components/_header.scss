@@ -3,5 +3,23 @@
    -------------------------------- */
 
 .header {
-    outline: solid red 2px;
+    // outline: solid red 2px;
+    @include flexCenter;
+    padding: 2rem;
+}
+
+.header__nav {
+    max-width: $max-width;
+    width: 100%;
+}
+
+.header__logo {
+    font-size: 4rem;
+    color: rgb(209, 59, 59);
+
+    span {
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
 }
