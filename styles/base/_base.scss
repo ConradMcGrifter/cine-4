@@ -19,10 +19,17 @@ html {
 body {
     min-height: 100%;
     font-size: 1.8rem;
+    font-family: $body-fontStack;
     background: color(mainBG);
     color: color(primaryText);
 }
 
 img {
     display: block;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $header-fontStack;
 }

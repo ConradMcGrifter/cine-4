@@ -11,7 +11,8 @@
 @import "base/base";
 
 // objects
-@import "objects/site-grid", "objects/content";
+@import "objects/site-grid", "objects/content", "objects/wrappers/cards-wrapper",
+    "objects/wrappers/tabs-wrapper";
 
 // components
-@import "components/movieCard", "components/header";
+@import "components/card", "components/header";
