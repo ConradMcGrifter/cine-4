@@ -50,14 +50,14 @@ let schedule = {
             tue: ["7:30"],
             wed: ["7:30"],
             thu: ["7:30"],
-            fri: ["5:10", "7:30"],
+            fri: [""],
             sat: ["12:30", "2:30", "5:10", "7:30"],
             sun: ["12:30", "2:30", "5:10", "7:30"],
         },
     },
 };
 
-const printShowtimes1 = (movie, day) => {
+const printShowtimes = (movie, day) => {
     let movieTimes = schedule[movie].showtimes[day];
     movieTimes.forEach((time) => {
         if (movieTimes == "") {
@@ -68,4 +68,20 @@ const printShowtimes1 = (movie, day) => {
     });
 };
 
-// printShowtimes1("movie1", "sat");
+const createMovieCard = (movie) => {
+    let movieObj = schedule[movie];
+    console.log(movieObj);
+};
+
+let friday = document.querySelector("[data-fri]");
+
+friday.addEventListener("click", () => {
+    // loop through the movie objects in schedule obj
+    for (let movie in schedule) {
+        // if the movie object has show times for the specific day, create card ele + add showtimes
+        if (schedule[movie].showtimes.fri[0] != "") {
+            createMovieCard(movie);
+            printShowtimes(movie, "fri");
+        }
+    }
+});
