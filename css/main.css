@@ -315,6 +315,11 @@ h3 {
   cursor: pointer;
 }
 
+.tab.--is-active {
+  background-color: #07c0e9;
+  color: white;
+}
+
 .tab + .tab {
   margin-left: 1rem;
 }
