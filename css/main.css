@@ -52,8 +52,8 @@ h3 {
 .site-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 10rem calc(100vh - 10rem);
-      grid-template-rows: 10rem calc(100vh - 10rem);
+  -ms-grid-rows: 10rem 1fr;
+      grid-template-rows: 10rem 1fr;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   min-height: 100%;
@@ -67,10 +67,27 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 2rem 2rem 2rem 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 /* -----------------------------------------------------
@@ -85,16 +102,52 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 85rem;
+  width: 100%;
 }
 
 /* -----------------------------------------------------
         OBJECTS -> WRAPPERS -> #tabs-wrapper
    ----------------------------------------------------- */
 .tabs-wrapper {
+  max-width: 85rem;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tabs-wrapper .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 85rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .tabs-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-right: 1rem;
+    height: 100%;
+  }
+  .tabs-wrapper .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+  }
 }
 
 /* --------------------------------
@@ -207,6 +260,9 @@ h3 {
   .card__poster {
     display: none;
   }
+  .card__synopsis {
+    display: none;
+  }
 }
 
 /* --------------------------------
@@ -243,5 +299,56 @@ h3 {
   color: white;
   font-size: 1.6rem;
   font-weight: 300;
+}
+
+/* --------------------------------
+        COMPONENTS -> #tab
+   -------------------------------- */
+.tab {
+  background: gray;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.tab + .tab {
+  margin-left: 1rem;
+}
+
+.tab__day {
+  font-size: 2.4rem;
+}
+
+.tab__date {
+  font-weight: 400;
+}
+
+/*
+----------------------------
+        media queries
+----------------------------
+*/
+@media only screen and (max-width: 650px) {
+  .tab__date {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tab {
+    width: 100%;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .tab + .tab {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .tab__day {
+    font-size: 1.6rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

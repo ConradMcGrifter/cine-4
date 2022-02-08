@@ -1,11 +1,12 @@
 # BASE
 
--   base........................html and body styles + resets
+-   base........................html and body styles + resets + h1/h2/h3 style
 
 # COMPONENTS
 
 -   header......................header styles
--   card...................holds the synopisis + poster + showtimes
+-   card........................holds the synopisis + poster + showtimes
+-   tab.........................shows the day of the week and the date
 
 # OBJECTS
 

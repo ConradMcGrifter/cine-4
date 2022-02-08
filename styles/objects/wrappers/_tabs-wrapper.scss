@@ -3,6 +3,31 @@
    ----------------------------------------------------- */
 
 .tabs-wrapper {
-    display: flex;
+    // display: flex;
     max-width: $max-width;
+    width: 100%;
+    // margin-bottom: 1rem;
+    justify-content: center;
+
+    .wrap {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tabs-wrapper {
+        flex-direction: column;
+        width: max-content;
+        margin-right: 1rem;
+        height: 100%;
+
+        .wrap {
+            flex-direction: column;
+            position: sticky;
+            top: 2rem;
+        }
+    }
 }

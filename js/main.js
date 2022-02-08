@@ -68,4 +68,4 @@ const printShowtimes1 = (movie, day) => {
     });
 };
 
-printShowtimes1("movie1", "sat");
+// printShowtimes1("movie1", "sat");

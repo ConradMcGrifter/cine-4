@@ -1,0 +1,55 @@
+/* --------------------------------
+        COMPONENTS -> #tab
+   -------------------------------- */
+
+.tab {
+    background: gray;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    & + .tab {
+        margin-left: 1rem;
+    }
+}
+
+.tab__day {
+    font-size: 2.4rem;
+}
+
+.tab__date {
+    font-weight: 400;
+}
+
+/*
+----------------------------
+        media queries
+----------------------------
+*/
+
+@media only screen and (max-width: 650px) {
+    .tab__date {
+        // display: none;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tab {
+        width: 100%;
+        border-radius: 0 $border-radius $border-radius 0;
+
+        & + .tab {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+
+    .tab__day {
+        font-size: 1.6rem;
+    }
+}
