@@ -12,7 +12,7 @@
 
 .card__poster {
     width: 100%;
-    max-width: 15rem;
+    max-width: 17rem;
     margin: auto 0;
 }
 
@@ -33,6 +33,7 @@
     font-size: 1.6rem;
     font-family: $body-fontStack;
     margin-bottom: 1rem;
+    line-height: 1.4;
 }
 
 .card__trailer {
@@ -71,7 +72,7 @@
 ----------------------------
 */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 850px) {
     .card {
         grid-template-columns: auto 1fr;
     }
@@ -84,7 +85,7 @@
     }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     .card__poster {
         display: none;
     }
