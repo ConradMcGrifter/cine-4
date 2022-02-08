@@ -3,11 +3,15 @@
    -------------------------------- */
 
 .card {
-    // display: flex;
+    cursor: default;
     display: grid;
     grid-template-columns: auto 2fr 1fr;
     outline: solid gray 1px;
     padding: 2rem 1rem;
+
+    & + .card {
+        margin-top: 2rem;
+    }
 }
 
 .card__poster {
@@ -34,6 +38,7 @@
     font-family: $body-fontStack;
     margin-bottom: 1rem;
     line-height: 1.4;
+    max-width: 50ch;
 }
 
 .card__trailer {
@@ -44,6 +49,7 @@
     color: lightblue;
     font-size: 1.6rem;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .cardTimes-wrap {
@@ -61,7 +67,7 @@
     height: max-content;
     background: color(timeBG);
     color: color(timeText);
-    // width: max-content;
+    text-align: center;
     border-radius: $border-radius;
     font-weight: 600;
 }
@@ -79,7 +85,6 @@
     .cardTimes-wrap {
         width: 100%;
         grid-template-columns: repeat(auto-fit, max-content);
-
         grid-column: 1 / -1;
         margin-top: 2rem;
     }
