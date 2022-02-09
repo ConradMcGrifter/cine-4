@@ -7,6 +7,7 @@
 -   header......................header styles
 -   card........................holds the synopisis + poster + showtimes
 -   tab.........................shows the day of the week and the date
+-   lightbox....................this holds the iframe for movie trailers
 
 # OBJECTS
 
