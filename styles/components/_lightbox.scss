@@ -1,0 +1,11 @@
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.815);
+    @include flexCenter(column);
+    display: none;
+
+    &[data-display="true"] {
+        display: flex;
+    }
+}

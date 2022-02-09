@@ -22,6 +22,26 @@ const removeCards = () => {
     });
 };
 
+const setTrailerSource = () => {
+    let cardTrailer = document.querySelectorAll("[data-trailer]");
+
+    let lightbox = document.querySelector(".lightbox");
+    let closeBtn = document.querySelector(".lightbox__close");
+    let video = document.querySelector(".lightbox__video");
+
+    cardTrailer.forEach((trailer) => {
+        trailer.addEventListener("click", () => {
+            lightbox.setAttribute("data-display", "true");
+            video.src = `${trailer.dataset.trailer}`;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.removeAttribute("data-display");
+        video.src = "";
+    });
+};
+
 friday.addEventListener("click", () => {
     // remove all cards currently in the DOM
     removeCards();
@@ -30,6 +50,7 @@ friday.addEventListener("click", () => {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes.fri[0] != "") {
             createMovieCard(movie, "fri");
+            setTrailerSource();
         }
     }
 });
@@ -42,6 +63,7 @@ saturday.addEventListener("click", () => {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes.sat[0] != "") {
             createMovieCard(movie, "sat");
+            setTrailerSource();
         }
     }
 });
@@ -54,6 +76,7 @@ sunday.addEventListener("click", () => {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes.sun[0] != "") {
             createMovieCard(movie, "sun");
+            setTrailerSource();
         }
     }
 });
@@ -66,6 +89,7 @@ monday.addEventListener("click", () => {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes.mon[0] != "") {
             createMovieCard(movie, "mon");
+            setTrailerSource();
         }
     }
 });
@@ -78,6 +102,7 @@ tuesday.addEventListener("click", () => {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes.tue[0] != "") {
             createMovieCard(movie, "tue");
+            setTrailerSource();
         }
     }
 });
@@ -90,6 +115,7 @@ wednesday.addEventListener("click", () => {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes.wed[0] != "") {
             createMovieCard(movie, "wed");
+            setTrailerSource();
         }
     }
 });
@@ -102,6 +128,7 @@ thursday.addEventListener("click", () => {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes.thu[0] != "") {
             createMovieCard(movie, "thu");
+            setTrailerSource();
         }
     }
 });
@@ -114,6 +141,7 @@ switch (currentDay) {
             // if the movie object has show times for the specific day, create card ele + add showtimes
             if (schedule[movie].showtimes.sun[0] != "") {
                 createMovieCard(movie, "sun");
+                setTrailerSource();
             }
         }
         break;
@@ -123,6 +151,7 @@ switch (currentDay) {
         for (let movie in schedule) {
             if (schedule[movie].showtimes.mon[0] != "") {
                 createMovieCard(movie, "mon");
+                setTrailerSource();
             }
         }
         break;
@@ -132,6 +161,7 @@ switch (currentDay) {
         for (let movie in schedule) {
             if (schedule[movie].showtimes.tue[0] != "") {
                 createMovieCard(movie, "tue");
+                setTrailerSource();
             }
         }
         break;
@@ -141,6 +171,7 @@ switch (currentDay) {
         for (let movie in schedule) {
             if (schedule[movie].showtimes.wed[0] != "") {
                 createMovieCard(movie, "wed");
+                setTrailerSource();
             }
         }
         break;
@@ -150,6 +181,7 @@ switch (currentDay) {
         for (let movie in schedule) {
             if (schedule[movie].showtimes.thu[0] != "") {
                 createMovieCard(movie, "thu");
+                setTrailerSource();
             }
         }
         break;
@@ -159,6 +191,7 @@ switch (currentDay) {
         for (let movie in schedule) {
             if (schedule[movie].showtimes.fri[0] != "") {
                 createMovieCard(movie, "fri");
+                setTrailerSource();
             }
         }
         break;
@@ -168,12 +201,13 @@ switch (currentDay) {
         for (let movie in schedule) {
             if (schedule[movie].showtimes.sat[0] != "") {
                 createMovieCard(movie, "sat");
+                setTrailerSource();
             }
         }
         break;
 }
 
-// ---- figure out which days have already passed and make it so they cant be clicked on
+// ---- figure out which days have already passed and make it so the tab cant be clicked on
 let tabs = Array.from(document.querySelectorAll(".tab"));
 let currentTabIndex;
 tabs.forEach((tab) => {

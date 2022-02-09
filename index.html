@@ -54,6 +54,20 @@
                 <div class="cards-wrapper" data-cards-wrapper></div>
             </main>
         </div>
+        <div class="lightbox">
+            <iframe
+                class="lightbox__video"
+                data-video
+                width="560"
+                height="315"
+                src=""
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+            <button class="lightbox__close">close</button>
+        </div>
         <!-- movie card template -->
         <template data-movieCard-template>
             <div class="card">
@@ -61,7 +75,9 @@
                 <div class="cardInfo-wrap">
                     <h2 class="card__title" data-title></h2>
                     <p class="card__synopsis" data-synopsis></p>
-                    <button class="card__trailer"></button>
+                    <button class="card__trailer" data-trailer>
+                        View Trailer
+                    </button>
                 </div>
                 <div class="cardTimes-wrap" data-times-wrapper>
                     <!-- ⤵ this element gets added with javaScript⤵  -->

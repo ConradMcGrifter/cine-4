@@ -4,6 +4,8 @@
 // Roboto  font
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
+// -------------------------------------------------------------------------------------------
+
 // utils
 @import "utils/variables", "utils/mixins", "utils/functions";
 
@@ -15,4 +17,5 @@
     "objects/wrappers/tabs-wrapper";
 
 // components
-@import "components/card", "components/header", "components/tab";
+@import "components/card", "components/header", "components/tab",
+    "components/lightbox";
