@@ -9,6 +9,10 @@
     outline: solid gray 1px;
     padding: 2rem 1rem;
 
+    // &[data-hidden="true"] {
+    //     display: none;
+    // }
+
     & + .card {
         margin-top: 2rem;
     }
@@ -62,7 +66,7 @@
     width: 100%;
 }
 
-.card__time {
+[data-card__time] {
     padding: 1rem;
     height: max-content;
     background: color(timeBG);

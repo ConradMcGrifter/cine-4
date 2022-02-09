@@ -224,7 +224,7 @@ h3 {
   width: 100%;
 }
 
-.card__time {
+[data-card__time] {
   padding: 1rem;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -305,7 +305,7 @@ h3 {
         COMPONENTS -> #tab
    -------------------------------- */
 .tab {
-  background: gray;
+  background-color: gray;
   padding: 1rem;
   width: 100%;
   text-align: center;
@@ -322,6 +322,11 @@ h3 {
 
 .tab + .tab {
   margin-left: 1rem;
+}
+
+.tab:hover {
+  background-color: white;
+  color: black;
 }
 
 .tab__day {
