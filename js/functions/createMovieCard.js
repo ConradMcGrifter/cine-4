@@ -16,6 +16,7 @@ export const createMovieCard = (movie, day) => {
 
     // access the card component inside the html template element
     let movieCard = movieCardTemplate.content.cloneNode(true).children[0];
+    // this is the element that the cards will be appended to
     let timesWrapper = movieCard.querySelector("[data-times-wrapper]");
 
     // get all elements that will receive content from the movie object

@@ -47,168 +47,81 @@ const setTrailerSource = () => {
     });
 };
 
-friday.addEventListener("click", () => {
+const displayShows = (day) => {
     // remove all cards currently in the DOM
     removeCards();
     // loop through the movie objects in schedule object
     for (let movie in schedule) {
         // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes.fri[0] != "") {
-            createMovieCard(movie, "fri");
+        if (schedule[movie].showtimes[day][0] != "") {
+            createMovieCard(movie, day);
             setTrailerSource();
         }
     }
+};
+
+friday.addEventListener("click", () => {
+    displayShows("fri");
 });
 
 saturday.addEventListener("click", () => {
-    // remove all cards currently in the DOM
-    removeCards();
-    // loop through the movie objects in schedule object
-    for (let movie in schedule) {
-        // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes.sat[0] != "") {
-            createMovieCard(movie, "sat");
-            setTrailerSource();
-        }
-    }
+    displayShows("sat");
 });
 
 sunday.addEventListener("click", () => {
-    // remove all cards currently in the DOM
-    removeCards();
-    // loop through the movie objects in schedule object
-    for (let movie in schedule) {
-        // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes.sun[0] != "") {
-            createMovieCard(movie, "sun");
-            setTrailerSource();
-        }
-    }
+    displayShows("sun");
 });
 
 monday.addEventListener("click", () => {
-    // remove all cards currently in the DOM
-    removeCards();
-    // loop through the movie objects in schedule object
-    for (let movie in schedule) {
-        // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes.mon[0] != "") {
-            createMovieCard(movie, "mon");
-            setTrailerSource();
-        }
-    }
+    displayShows("mon");
 });
 
 tuesday.addEventListener("click", () => {
-    // remove all cards currently in the DOM
-    removeCards();
-    // loop through the movie objects in schedule object
-    for (let movie in schedule) {
-        // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes.tue[0] != "") {
-            createMovieCard(movie, "tue");
-            setTrailerSource();
-        }
-    }
+    displayShows("tue");
 });
 
 wednesday.addEventListener("click", () => {
-    // remove all cards currently in the DOM
-    removeCards();
-    // loop through the movie objects in schedule object
-    for (let movie in schedule) {
-        // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes.wed[0] != "") {
-            createMovieCard(movie, "wed");
-            setTrailerSource();
-        }
-    }
+    displayShows("wed");
 });
 
 thursday.addEventListener("click", () => {
-    // remove all cards currently in the DOM
-    removeCards();
-    // loop through the movie objects in schedule object
-    for (let movie in schedule) {
-        // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes.thu[0] != "") {
-            createMovieCard(movie, "thu");
-            setTrailerSource();
-        }
-    }
+    displayShows("thu");
 });
 
 switch (currentDay) {
     case 0:
         sunday.setAttribute("data-active", "true");
-        // loop through the movie objects in schedule object
-        for (let movie in schedule) {
-            // if the movie object has show times for the specific day, create card ele + add showtimes
-            if (schedule[movie].showtimes.sun[0] != "") {
-                createMovieCard(movie, "sun");
-                setTrailerSource();
-            }
-        }
+        displayShows("sun");
         break;
 
     case 1:
         monday.setAttribute("data-active", "true");
-        for (let movie in schedule) {
-            if (schedule[movie].showtimes.mon[0] != "") {
-                createMovieCard(movie, "mon");
-                setTrailerSource();
-            }
-        }
+        displayShows("mon");
         break;
 
     case 2:
         tuesday.setAttribute("data-active", "true");
-        for (let movie in schedule) {
-            if (schedule[movie].showtimes.tue[0] != "") {
-                createMovieCard(movie, "tue");
-                setTrailerSource();
-            }
-        }
+        displayShows("tue");
         break;
 
     case 3:
         wednesday.setAttribute("data-active", "true");
-        for (let movie in schedule) {
-            if (schedule[movie].showtimes.wed[0] != "") {
-                createMovieCard(movie, "wed");
-                setTrailerSource();
-            }
-        }
+        displayShows("wed");
         break;
 
     case 4:
         thursday.setAttribute("data-active", "true");
-        for (let movie in schedule) {
-            if (schedule[movie].showtimes.thu[0] != "") {
-                createMovieCard(movie, "thu");
-                setTrailerSource();
-            }
-        }
+        displayShows("thu");
         break;
 
     case 5:
         friday.setAttribute("data-active", "true");
-        for (let movie in schedule) {
-            if (schedule[movie].showtimes.fri[0] != "") {
-                createMovieCard(movie, "fri");
-                setTrailerSource();
-            }
-        }
+        displayShows("fri");
         break;
 
     case 6:
         saturday.setAttribute("data-active", "true");
-        for (let movie in schedule) {
-            if (schedule[movie].showtimes.sat[0] != "") {
-                createMovieCard(movie, "sat");
-                setTrailerSource();
-            }
-        }
+        displayShows("sat");
         break;
 }
 
@@ -216,14 +129,28 @@ switch (currentDay) {
 let tabs = Array.from(document.querySelectorAll(".tab"));
 let currentTabIndex;
 tabs.forEach((tab) => {
+    // find the index of the tab that is set to active based on the current day (this is set by the switch statement on page load)
     if (tab.dataset.active == "true") {
         currentTabIndex = tabs.indexOf(tab);
     }
 });
 
 tabs.forEach((tab) => {
+    // loop through all the tabs and if a tab comes before the active tab (current day) -> change data-active to be false (this makes it unclickable and lower opacity)
     if (tabs.indexOf(tab) < currentTabIndex) {
         tab.setAttribute("data-active", "false");
     }
 });
 // -----
+// set active tab styles when a tab is clicked on -> ignore tabs that have data-active="false" (grayed out tabs)
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        for (let i = 0; i < tabs.length; i++) {
+            if (tabs[i].dataset.active == "false") {
+                continue;
+            }
+            tabs[i].removeAttribute("data-active");
+        }
+        tab.setAttribute("data-active", "true");
+    });
+});
