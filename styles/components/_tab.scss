@@ -12,7 +12,7 @@
     border-radius: $border-radius;
     cursor: pointer;
 
-    &.--is-active {
+    &[data-active="true"] {
         background-color: color(dateBG-active);
         color: white;
     }

@@ -315,7 +315,7 @@ h3 {
   cursor: pointer;
 }
 
-.tab.--is-active {
+.tab[data-active="true"] {
   background-color: #07c0e9;
   color: white;
 }
