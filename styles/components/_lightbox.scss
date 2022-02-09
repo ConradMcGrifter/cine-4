@@ -1,11 +1,35 @@
 .lightbox {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0.863);
     @include flexCenter(column);
     display: none;
 
     &[data-display="true"] {
         display: flex;
     }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    width: 100%;
+    @include flexCenter(column);
+}
+
+.lightbox__video {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+}
+
+.lightbox__close {
+    position: absolute;
+    bottom: 14%;
+    // left: 20%;
+    font-size: 2.4rem;
+    padding: 0.5rem;
 }

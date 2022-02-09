@@ -370,7 +370,7 @@ h3 {
 .lightbox {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.815);
+  background-color: rgba(0, 0, 0, 0.863);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,5 +391,41 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.lightbox__video {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 60%;
+  height: 60%;
+}
+
+.lightbox__close {
+  position: absolute;
+  bottom: 14%;
+  font-size: 2.4rem;
+  padding: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -40,6 +40,11 @@ const setTrailerSource = () => {
         lightbox.removeAttribute("data-display");
         video.src = "";
     });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.removeAttribute("data-display");
+        video.src = "";
+    });
 };
 
 friday.addEventListener("click", () => {
