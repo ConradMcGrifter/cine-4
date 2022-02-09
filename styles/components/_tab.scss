@@ -17,6 +17,11 @@
         color: white;
     }
 
+    &[data-active="false"] {
+        pointer-events: none;
+        opacity: 0.25;
+    }
+
     & + .tab {
         margin-left: 1rem;
     }

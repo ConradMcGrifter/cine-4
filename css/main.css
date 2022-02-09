@@ -320,6 +320,11 @@ h3 {
   color: white;
 }
 
+.tab[data-active="false"] {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
 .tab + .tab {
   margin-left: 1rem;
 }

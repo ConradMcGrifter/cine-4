@@ -1,10 +1,12 @@
 import { schedule } from "/js/schedule.js";
+import { createMovieCard } from "/js/functions/createMovieCard.js";
 
 let d = new Date();
 let currentDay = d.getDay();
 console.log(d.getDate());
 console.log(d.toString().split(" ")[1], d.toString().split(" ")[2]);
 
+// these are the tabs for each day of the week
 let friday = document.querySelector("[data-fri]");
 let saturday = document.querySelector("[data-sat]");
 let sunday = document.querySelector("[data-sun]");
@@ -12,35 +14,6 @@ let monday = document.querySelector("[data-mon]");
 let tuesday = document.querySelector("[data-tue]");
 let wednesday = document.querySelector("[data-wed]");
 let thursday = document.querySelector("[data-thu]");
-
-let movieCardTemplate = document.querySelector("[data-movieCard-template]");
-let cardWrapper = document.querySelector("[data-cards-wrapper]");
-
-const createMovieCard = (movie, day) => {
-    let movieObj = schedule[movie];
-
-    let movieCard = movieCardTemplate.content.cloneNode(true).children[0];
-    let timesWrapper = movieCard.querySelector("[data-times-wrapper]");
-
-    let title = movieCard.querySelector("[data-title]");
-    let poster = movieCard.querySelector("[data-poster]");
-    let synopsis = movieCard.querySelector("[data-synopsis]");
-
-    title.textContent = movieObj.title;
-    poster.src = `${movieObj.poster}`;
-    synopsis.textContent = movieObj.synopsis;
-
-    movieObj.showtimes[day].forEach((time) => {
-        let showtime = document.createElement("div");
-        showtime.setAttribute("data-card__time", null);
-        showtime.innerText = time;
-        timesWrapper.append(showtime);
-    });
-
-    movieCard.setAttribute("data-movie", movie);
-
-    cardWrapper.append(movieCard);
-};
 
 const removeCards = () => {
     let cards = document.querySelectorAll(".card");
@@ -199,3 +172,19 @@ switch (currentDay) {
         }
         break;
 }
+
+// ---- figure out which days have already passed and make it so they cant be clicked on
+let tabs = Array.from(document.querySelectorAll(".tab"));
+let currentTabIndex;
+tabs.forEach((tab) => {
+    if (tab.dataset.active == "true") {
+        currentTabIndex = tabs.indexOf(tab);
+    }
+});
+
+tabs.forEach((tab) => {
+    if (tabs.indexOf(tab) < currentTabIndex) {
+        tab.setAttribute("data-active", "false");
+    }
+});
+// -----
