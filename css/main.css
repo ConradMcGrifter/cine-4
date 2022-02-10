@@ -101,7 +101,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 85rem;
+  max-width: 95rem;
   width: 100%;
 }
 
@@ -109,7 +109,7 @@ h3 {
         OBJECTS -> WRAPPERS -> #tabs-wrapper
    ----------------------------------------------------- */
 .tabs-wrapper {
-  max-width: 85rem;
+  max-width: 95rem;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -169,7 +169,7 @@ h3 {
 
 .card__poster {
   width: 100%;
-  max-width: 15rem;
+  max-width: 20rem;
 }
 
 .cardInfo-wrap {
@@ -295,7 +295,7 @@ h3 {
 }
 
 .header__nav {
-  max-width: 85rem;
+  max-width: 95rem;
   width: 100%;
 }
 
