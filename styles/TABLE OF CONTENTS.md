@@ -15,7 +15,7 @@
 -   content.....................holds the main content of the site
     # WRAPPERS
     -   cards-wrapper...........wraps the #movieCard elements
-    -   tabs-wrapper............wraps the date elements
+    -   tabs-wrapper............wraps the #tab elements
 
 # UTILS
 

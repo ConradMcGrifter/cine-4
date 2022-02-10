@@ -11,3 +11,5 @@
 -   add a fade in animation for cards every time a day tab is clicked on
 
 -   make the day tabs into a slider with overflow hidden so I can add next weeks showtimes when they become available?
+
+-   add rating for movies
