@@ -157,8 +157,8 @@ h3 {
   cursor: default;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 2fr 1fr;
-      grid-template-columns: auto 2fr 1fr;
+  -ms-grid-columns: 18rem 2fr 0.85fr;
+      grid-template-columns: 18rem 2fr 0.85fr;
   outline: solid gray 1px;
   padding: 2rem 1rem;
 }
@@ -169,7 +169,8 @@ h3 {
 
 .card__poster {
   width: 100%;
-  max-width: 20rem;
+  max-width: 18rem;
+  margin: auto 0;
 }
 
 .cardInfo-wrap {
@@ -194,7 +195,7 @@ h3 {
   font-family: "Roboto", arial;
   margin-bottom: 1rem;
   line-height: 1.6;
-  max-width: 50ch;
+  max-width: 55ch;
 }
 
 .card__trailer {

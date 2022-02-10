@@ -5,7 +5,7 @@
 .card {
     cursor: default;
     display: grid;
-    grid-template-columns: auto 2fr 1fr;
+    grid-template-columns: 18rem 2fr 0.85fr;
     outline: solid gray 1px;
     padding: 2rem 1rem;
 
@@ -20,8 +20,8 @@
 
 .card__poster {
     width: 100%;
-    max-width: 20rem;
-    // margin: auto 0;
+    max-width: 18rem;
+    margin: auto 0;
 }
 
 // this wraps the title, synopsis, and trailer elements
@@ -42,7 +42,7 @@
     font-family: $body-fontStack;
     margin-bottom: 1rem;
     line-height: 1.6;
-    max-width: 50ch;
+    max-width: 55ch;
 }
 
 .card__trailer {
