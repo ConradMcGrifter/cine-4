@@ -2,7 +2,7 @@ import { schedule } from "/js/schedule.js";
 import { createMovieCard } from "/js/functions/createMovieCard.js";
 import { tabs } from "/js/dayTabs.js";
 
-console.log(tabs.d);
+// console.log(tabs.d);
 
 function removeCards() {
     let cards = document.querySelectorAll(".card");
