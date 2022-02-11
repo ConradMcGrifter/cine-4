@@ -2,10 +2,6 @@
 import { displayShows, getDates } from "./functions/index.js";
 import * as tabJS from "/js/tabs/index.js";
 
-// =================================================================================
-
-// =================================================================================
-
 // Create card elements when specific tab is clicked on
 tabJS.days.friday.addEventListener("click", () => {
     displayShows("fri");

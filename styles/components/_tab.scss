@@ -30,6 +30,11 @@
         background-color: white;
         color: black;
     }
+
+    &:hover[data-active="true"] {
+        background-color: color(dateBG-active);
+        color: white;
+    }
 }
 
 .tab__day {

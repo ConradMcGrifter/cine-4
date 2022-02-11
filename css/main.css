@@ -32,7 +32,7 @@ body {
   min-height: 100%;
   font-size: 1.8rem;
   font-family: "Roboto", arial;
-  background: #141414;
+  background: #1b1b1b;
   color: #ffffff;
 }
 
@@ -220,7 +220,7 @@ h3 {
       grid-template-columns: 1fr 1fr;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
-  background-color: #1a1919;
+  background-color: #272525;
   width: 100%;
 }
 
@@ -342,6 +342,11 @@ h3 {
 .tab:hover {
   background-color: white;
   color: black;
+}
+
+.tab:hover[data-active="true"] {
+  background-color: #07c0e9;
+  color: white;
 }
 
 .tab__day {
