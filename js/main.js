@@ -4,7 +4,7 @@ import * as tabJS from "/js/tabs/index.js";
 
 // =================================================================================
 // set the start and end date for the week of showtimes
-let dateRange = getDates(new Date(2022, 1, 4), new Date(2022, 1, 10));
+let dateRange = getDates(new Date(2022, 1, 11), new Date(2022, 1, 17));
 // get all the date elements from the DOM
 let dates = document.querySelectorAll("[data-date]");
 // loop through each date and change the innerText to the month and day from the dateRange array
