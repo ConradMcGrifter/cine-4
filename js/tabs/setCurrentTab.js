@@ -47,5 +47,4 @@ switch (currentDay) {
         displayShows("sat");
         break;
 }
-
 export * as setCurrentTab from "./setCurrentTab.js";

@@ -15,7 +15,6 @@ for (let i = 0; i < dates.length; i++) {
 }
 // =================================================================================
 
-// =================================================================================
 // Create card elements when specific tab is clicked on
 tabJS.days.friday.addEventListener("click", () => {
     displayShows("fri");
@@ -44,4 +43,3 @@ tabJS.days.wednesday.addEventListener("click", () => {
 tabJS.days.thursday.addEventListener("click", () => {
     displayShows("thu");
 });
-// =================================================================================
