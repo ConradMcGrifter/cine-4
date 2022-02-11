@@ -1,4 +1,12 @@
 import { schedule } from "/js/schedule.js";
+
+let showtimeDate;
+let tabs = Array.from(document.querySelectorAll(".tab"));
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        showtimeDate = tab.querySelector("[data-date]").innerText;
+    });
+});
 /* 
 this function creates the card element -> movie parameter takes a movie object from the schedule object
 the day parameter is used to get the specific day from the showtimes object in the movie object inside the schedule object
@@ -24,12 +32,16 @@ export const createMovieCard = (movie, day) => {
     let poster = movieCard.querySelector("[data-poster]");
     let synopsis = movieCard.querySelector("[data-synopsis]");
     let trailer = movieCard.querySelector("[data-trailer]");
+    let showtimeHeader = movieCard.querySelector("[data-showtime-header]");
 
     // add content from movie object into the card component
     title.textContent = movieObj.title;
     poster.src = `${movieObj.poster}`;
     synopsis.textContent = movieObj.synopsis;
     trailer.setAttribute("data-trailer", movieObj.trailer);
+    if (showtimeDate != undefined) {
+        showtimeHeader.textContent += showtimeDate;
+    }
 
     // add the showtimes to the card element
     movieObj.showtimes[day].forEach((time) => {

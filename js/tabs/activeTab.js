@@ -2,6 +2,7 @@ import { setCurrentTab } from "./setCurrentTab.js"; // this needs to be imported
 
 // ---- figure out which days have already passed and make it so the tab cant be clicked on
 let tabs = Array.from(document.querySelectorAll(".tab"));
+
 let currentTabIndex;
 tabs.forEach((tab) => {
     // find the index of the tab that is set to active based on the current day (this is set by the switch statement on page load)
@@ -27,6 +28,10 @@ tabs.forEach((tab) => {
             tabs[i].removeAttribute("data-active");
         }
         tab.setAttribute("data-active", "true");
+
+        // showtimeDate = tab.querySelector("[data-date]").innerText;
+        // console.log(showtimeDate);
+        // console.log(tab.querySelector("[data-date]").innerText);
     });
 });
 
