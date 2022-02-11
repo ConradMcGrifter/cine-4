@@ -1,5 +1,5 @@
 export * as days from "./dayTabs.js";
 
-export { activeTab } from "./activeTab.js";
+export * as activeTabs from "./activeTab.js";
 
-export { setCurrentTab, currentDay } from "./setCurrentTab.js";
+export * as setCurrentTab from "./setCurrentTab.js";

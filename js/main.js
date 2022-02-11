@@ -2,10 +2,7 @@ import { schedule } from "/js/schedule.js";
 import { displayShows, getDates } from "./functions/index.js";
 import * as tabJS from "/js/tabs/index.js";
 
-tabJS.setCurrentTab(tabJS.currentDay); // set the active tab based on the current day
-tabJS.activeTab(); // figure out which days have already passed and make them unclickable + change active tab on click
-// --------------------------------------------------
-
+// =================================================================================
 // set the start and end date for the week of showtimes
 let dateRange = getDates(new Date(2022, 1, 4), new Date(2022, 1, 10));
 // get all the date elements from the DOM
@@ -16,8 +13,10 @@ for (let i = 0; i < dates.length; i++) {
         dateRange[i].toString().split(" ")[2]
     }`;
 }
+// =================================================================================
 
-// ------- Create card elements when specific tab is clicked on --------------
+// =================================================================================
+// Create card elements when specific tab is clicked on
 tabJS.days.friday.addEventListener("click", () => {
     displayShows("fri");
 });
@@ -45,3 +44,4 @@ tabJS.days.wednesday.addEventListener("click", () => {
 tabJS.days.thursday.addEventListener("click", () => {
     displayShows("thu");
 });
+// =================================================================================
