@@ -1,50 +1,47 @@
 import { schedule } from "/js/schedule.js";
-import { createMovieCard } from "/js/functions/createMovieCard.js";
-import { tabs } from "/js/dayTabs.js";
+import * as functions from "/js/functions/index.js";
+import * as tabJS from "/js/tabs/index.js";
 
-// console.log(tabs.d);
+tabJS.setCurrentTab(tabJS.currentDay); // set the active tab based on the current day
+tabJS.activeTab(); // figure out which days have already passed and make them unclickable + change active tab on click
+// --------------------------------------------------
 
-function removeCards() {
-    let cards = document.querySelectorAll(".card");
-    cards.forEach((card) => {
-        card.remove();
-    });
+// set the start and end date for the week of showtimes
+let dateRange = functions.getDates(new Date(2022, 1, 4), new Date(2022, 1, 10));
+// get all the date elements from the DOM
+let dates = document.querySelectorAll("[data-date]");
+// loop through each date and change the innerText to the month and day from the dateRange array
+for (let i = 0; i < dates.length; i++) {
+    dates[i].innerText = `${dateRange[i].toString().split(" ")[1]} ${
+        dateRange[i].toString().split(" ")[2]
+    }`;
 }
 
-function setTrailerSource() {
-    let cardTrailer = document.querySelectorAll("[data-trailer]");
+// ------- Create card elements when specific tab is clicked on --------------
+tabJS.days.friday.addEventListener("click", () => {
+    functions.displayShows("fri");
+});
 
-    let lightbox = document.querySelector(".lightbox");
-    let closeBtn = document.querySelector(".lightbox__close");
-    let video = document.querySelector(".lightbox__video");
+tabJS.days.saturday.addEventListener("click", () => {
+    functions.displayShows("sat");
+});
 
-    cardTrailer.forEach((trailer) => {
-        trailer.addEventListener("click", () => {
-            lightbox.setAttribute("data-display", "true");
-            video.src = `${trailer.dataset.trailer}`;
-        });
-    });
+tabJS.days.sunday.addEventListener("click", () => {
+    functions.displayShows("sun");
+});
 
-    closeBtn.addEventListener("click", () => {
-        lightbox.removeAttribute("data-display");
-        video.src = "";
-    });
+tabJS.days.monday.addEventListener("click", () => {
+    functions.displayShows("mon");
+});
 
-    lightbox.addEventListener("click", () => {
-        lightbox.removeAttribute("data-display");
-        video.src = "";
-    });
-}
+tabJS.days.tuesday.addEventListener("click", () => {
+    functions.displayShows("tue");
+});
 
-export function displayShows(day) {
-    // remove all cards currently in the DOM
-    removeCards();
-    // loop through the movie objects in schedule object
-    for (let movie in schedule) {
-        // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes[day][0] != "") {
-            createMovieCard(movie, day);
-            setTrailerSource();
-        }
-    }
-}
+tabJS.days.wednesday.addEventListener("click", () => {
+    functions.displayShows("wed");
+});
+
+tabJS.days.thursday.addEventListener("click", () => {
+    functions.displayShows("thu");
+});
