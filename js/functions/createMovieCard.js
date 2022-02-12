@@ -2,6 +2,7 @@ import { schedule } from "../schedule.js";
 
 let d = new Date();
 // gets the current date then changes it into a string with only the month and day
+// this variable is then used to set the inital showtimeDate for the showtimeHeader inside the createMovieCard function
 let today = `${d.toString().split(" ")[1]} ${d.toString().split(" ")[2]}`;
 
 /*
