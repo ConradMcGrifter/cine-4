@@ -1,3 +1,12 @@
+/*
+this function is used to control the lightbox and adds an event listener "click" to
+each card's "trailer" element that sets the src value of the lightbox iframe (youtube video)
+based on the trailer elements data-trailer value
+
+(the createMovieCard function sets the value of the data-trailer to be the trailer value from 
+the movie object in the schedule object. this function uses that value to set the src of the youtube iframe)
+*/
+
 export function setTrailerSource() {
     let cardTrailer = document.querySelectorAll("[data-trailer]");
 

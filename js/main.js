@@ -1,4 +1,3 @@
-// import { schedule } from "/js/schedule.js";
 import {
     displayShows,
     setCardShowtimeDate,
@@ -131,8 +130,8 @@ thursday.addEventListener("click", () => {
 // --------------------------------------------------------------------------
 // figure out which days have already passed and make it so the tab cant be clicked on
 let tabs = Array.from(document.querySelectorAll(".tab"));
-
 let currentTabIndex;
+
 tabs.forEach((tab) => {
     // find the index of the tab that is set to active based on the current day (this is set by the switch statement on page load)
     if (tab.dataset.active == "true") {
@@ -140,15 +139,12 @@ tabs.forEach((tab) => {
     }
 });
 
+// loop through all the tabs and if a tab comes before the active tab (current day) -> change data-active to be false (this makes it unclickable and lower opacity). also add event listener to each tab that sets the clicked tab to active
 tabs.forEach((tab) => {
-    // loop through all the tabs and if a tab comes before the active tab (current day) -> change data-active to be false (this makes it unclickable and lower opacity)
     if (tabs.indexOf(tab) < currentTabIndex) {
         tab.setAttribute("data-active", "false");
     }
-});
-// -----
-// set active tab styles when a tab is clicked on -> ignore tabs that have data-active="false" (grayed out tabs)
-tabs.forEach((tab) => {
+    // set active tab styles when a tab is clicked on -> ignore tabs that have data-active="false" (grayed out tabs)
     tab.addEventListener("click", () => {
         for (let i = 0; i < tabs.length; i++) {
             if (tabs[i].dataset.active == "false") {

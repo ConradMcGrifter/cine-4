@@ -1,15 +1,25 @@
 import { schedule } from "/js/schedule.js";
 
-let showtimeDate;
+/*
+get all the tabs (displaying the day of the week + the date) and put them into an array.
+loop through the array of tabs and add an event listner to each one -> when clicked the 
+showtimeDate variable's value becomes whatever the innerText of the clicked on tabs date is.
+the showtimeDate variable is then used inside the createMovieCard function to set the date 
+of the showtimeHeader variable for all the cards that get created
+*/
+let showtimeDate = "";
 let tabs = Array.from(document.querySelectorAll(".tab"));
+
 tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
         showtimeDate = tab.querySelector("[data-date]").innerText;
     });
 });
+//------------------------------------------------------------------------------
 /* 
-this function creates the card element -> movie parameter takes a movie object from the schedule object
-the day parameter is used to get the specific day from the showtimes object in the movie object inside the schedule object
+this function creates the card element -> movie parameter takes a movie object from 
+the schedule object, the day parameter is used to get the specific day from the 
+showtimes object in the movie object inside the schedule object
 ex) schedule-->movie1-->showtimes-->fri: ["5:10", "7:30"]
 */
 export const createMovieCard = (movie, day) => {
@@ -39,11 +49,9 @@ export const createMovieCard = (movie, day) => {
     poster.src = `${movieObj.poster}`;
     synopsis.textContent = movieObj.synopsis;
     trailer.setAttribute("data-trailer", movieObj.trailer);
-    if (showtimeDate != undefined) {
-        showtimeHeader.textContent += showtimeDate;
-    }
+    showtimeHeader.textContent += showtimeDate;
 
-    // add the showtimes to the card element
+    // add the showtimes from the movie object to the card element
     movieObj.showtimes[day].forEach((time) => {
         let showtime = document.createElement("div");
         showtime.setAttribute("data-card__time", null);
