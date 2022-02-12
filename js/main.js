@@ -37,7 +37,8 @@ let thursday = document.querySelector("[data-thu]");
 
 /* 
 this switch statement receives what the current day is as a parameter and sets 
-the active tab based on whatever day it is
+the active tab based on whatever day it is. then it creates card elements for the specific day
+it runs when the page first loads
 */
 
 let d = new Date();
@@ -139,8 +140,9 @@ tabs.forEach((tab) => {
     }
 });
 
-// loop through all the tabs and if a tab comes before the active tab (current day) -> change data-active to be false (this makes it unclickable and lower opacity). also add event listener to each tab that sets the clicked tab to active
+// loop through all the tabs
 tabs.forEach((tab) => {
+    // if the tab comes before the tab that is set to active on page load by the switch statement -> set its data-active attribute to false
     if (tabs.indexOf(tab) < currentTabIndex) {
         tab.setAttribute("data-active", "false");
     }
