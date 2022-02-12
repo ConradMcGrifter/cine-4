@@ -8,7 +8,7 @@
     grid-template-columns: 18rem 2fr 0.85fr;
     outline: solid gray 1px;
     padding: 2rem 1rem;
-
+    animation: transitionIn 0.5s ease-in-out;
     // &[data-hidden="true"] {
     //     display: none;
     // }
@@ -112,5 +112,16 @@
 @media only screen and (max-width: 450px) {
     .cardTimes-wrap {
         place-content: center;
+    }
+}
+
+// --------------------------------------
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
