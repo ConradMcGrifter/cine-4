@@ -1,28 +1,4 @@
-import {
-    displayShows,
-    setCardShowtimeDate,
-    getDates,
-} from "./functions/index.js";
-
-// ----------------------------------------------------------------
-
-/*
-use the getDates function to get a range of dates between two dates
-then get all the tab elements in an array
-then loop through each tab and put in each date from the dateRange array
-*/
-
-// set the start and end date for the week of showtimes
-let dateRange = getDates(new Date(2022, 1, 11), new Date(2022, 1, 17));
-// get all the date elements from the DOM
-let dates = document.querySelectorAll("[data-date]");
-// loop through each date and change the innerText to the month and day from the dateRange array
-for (let i = 0; i < dates.length; i++) {
-    dates[i].innerText = `${dateRange[i].toString().split(" ")[1]} ${
-        dateRange[i].toString().split(" ")[2]
-    }`;
-}
-// ----------------------------------------------------------------
+import { displayShows } from "./functions/index.js";
 
 // these are the tabs for each day of the week
 let friday = document.querySelector("[data-fri]");
@@ -49,49 +25,42 @@ switch (currentDay) {
         sunday.setAttribute("data-active", "true");
         days.sunday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("sun");
-        setCardShowtimeDate(sunday.querySelector("[data-date]").textContent);
         break;
 
     case 1:
         monday.setAttribute("data-active", "true");
         monday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("mon");
-        setCardShowtimeDate(monday.querySelector("[data-date]").textContent);
         break;
 
     case 2:
         tuesday.setAttribute("data-active", "true");
         tuesday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("tue");
-        setCardShowtimeDate(tuesday.querySelector("[data-date]").textContent);
         break;
 
     case 3:
         wednesday.setAttribute("data-active", "true");
         wednesday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("wed");
-        setCardShowtimeDate(wednesday.querySelector("[data-date]").textContent);
         break;
 
     case 4:
         thursday.setAttribute("data-active", "true");
         thursday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("thu");
-        setCardShowtimeDate(thursday.querySelector("[data-date]").textContent);
         break;
 
     case 5:
         friday.setAttribute("data-active", "true");
         friday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("fri");
-        setCardShowtimeDate(friday.querySelector("[data-date]").textContent);
         break;
 
     case 6:
         saturday.setAttribute("data-active", "true");
         saturday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("sat");
-        setCardShowtimeDate(saturday.querySelector("[data-date]").textContent);
         break;
 }
 // --------------------------------------------------------------------------

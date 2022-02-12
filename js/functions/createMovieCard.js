@@ -1,4 +1,8 @@
 import { schedule } from "/js/schedule.js";
+import { dateRange } from "/js/functions/getDates.js";
+
+let d = new Date();
+let today = `${d.toString().split(" ")[1]} ${d.toString().split(" ")[2]}`;
 
 /*
 get all the tabs (displaying the day of the week + the date) and put them into an array.
@@ -7,7 +11,7 @@ showtimeDate variable's value becomes whatever the innerText of the clicked on t
 the showtimeDate variable is then used inside the createMovieCard function to set the date 
 of the showtimeHeader variable for all the cards that get created
 */
-let showtimeDate = "";
+let showtimeDate = today; // initializes the showtimeDate to be the current day
 let tabs = Array.from(document.querySelectorAll(".tab"));
 
 tabs.forEach((tab) => {
@@ -15,6 +19,7 @@ tabs.forEach((tab) => {
         showtimeDate = tab.querySelector("[data-date]").innerText;
     });
 });
+
 //------------------------------------------------------------------------------
 /* 
 this function creates the card element -> movie parameter takes a movie object from 
