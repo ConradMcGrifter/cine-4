@@ -10,4 +10,4 @@
 
 -   getDates......................function used to get a range of dates between two dates
 
-# TABS
+-   setCardShowtimeDate...........sets what the date is of the tab selected inside the card element above the showtimes
