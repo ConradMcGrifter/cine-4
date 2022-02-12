@@ -1,4 +1,4 @@
-import { displayShows } from "./functions/index.js";
+import { displayShows, getDates } from "./functions/index.js";
 
 // these are the tabs for each day of the week
 let friday = document.querySelector("[data-fri]");
@@ -10,7 +10,23 @@ let wednesday = document.querySelector("[data-wed]");
 let thursday = document.querySelector("[data-thu]");
 
 // ----------------------------------------------------------------
+/*
+use the getDates function to get a range of dates between two dates
+then get all the tab elements in an array
+then loop through each tab and put in each date from the dateRange array
+*/
 
+// set the start and end date for the week of showtimes
+export let dateRange = getDates(new Date(2022, 1, 11), new Date(2022, 1, 17));
+// get all the date elements from the DOM
+let dates = document.querySelectorAll("[data-date]");
+// loop through each date and change the innerText to the month and day from the dateRange array
+for (let i = 0; i < dates.length; i++) {
+    dates[i].innerText = `${dateRange[i].toString().split(" ")[1]} ${
+        dateRange[i].toString().split(" ")[2]
+    }`;
+}
+// ----------------------------------------------------------------
 /* 
 this switch statement receives what the current day is as a parameter and sets 
 the active tab based on whatever day it is. then it creates card elements for the specific day

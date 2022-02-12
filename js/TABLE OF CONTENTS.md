@@ -1,3 +1,6 @@
+update the movie schedule inside schedule.js
+update the date range inside getDates.js (inside the functions folder)
+
 # FUNCTIONS
 
 -   createMovieCard.............this function takes parameters from schedule.js and creates the card element + appends to DOM
