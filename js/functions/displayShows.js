@@ -1,7 +1,7 @@
 import { removeCards } from "./removeCards.js";
 import { createMovieCard } from "./createMovieCard.js";
 import { setTrailerSource } from "./setTrailerSource.js";
-import { schedule } from "/js/schedule.js";
+import { schedule } from "../schedule.js";
 
 export function displayShows(day) {
     // remove all cards currently in the DOM

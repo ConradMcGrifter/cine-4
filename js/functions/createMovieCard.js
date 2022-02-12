@@ -1,4 +1,4 @@
-import { schedule } from "/js/schedule.js";
+import { schedule } from "../schedule.js";
 
 let d = new Date();
 // gets the current date then changes it into a string with only the month and day
