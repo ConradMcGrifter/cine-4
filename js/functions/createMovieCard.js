@@ -1,5 +1,11 @@
 import { schedule } from "../schedule.js";
 
+// get the local time then use that time and compare it to the showtimes in each card -> gray out any times that have already passed
+// should this code go into the createMovieCards.js file? or displayShows.js?
+// let localTime = new Date().toLocaleTimeString();
+// console.log(localTime.split(":"));
+
+//----------------------------------------------------------------------------------
 let d = new Date();
 // gets the current date then changes it into a string with only the month and day
 // this variable is then used to set the inital showtimeDate for the showtimeHeader inside the createMovieCard function
@@ -63,6 +69,11 @@ export const createMovieCard = (movie, day) => {
         showtime.setAttribute("data-card__time", null);
         showtime.innerText = time;
         timesWrapper.append(showtime);
+        // -----------------------
+        // if (time == "12:00pm") {
+        //     console.log("12:00");
+        // }
+        // -----------------------
     });
 
     movieCard.setAttribute("data-movie", movie);
