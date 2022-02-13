@@ -85,32 +85,41 @@ switch (currentDay) {
 these event listeners Create card elements when specific tab is clicked on by running the displayShows function
 */
 
+let contentWrap = document.querySelector(".content");
+
 friday.addEventListener("click", () => {
     displayShows("fri");
+    void contentWrap.offsetHeight;
 });
 
 saturday.addEventListener("click", () => {
     displayShows("sat");
+    void contentWrap.offsetHeight;
 });
 
 sunday.addEventListener("click", () => {
     displayShows("sun");
+    void contentWrap.offsetHeight;
 });
 
 monday.addEventListener("click", () => {
     displayShows("mon");
+    void contentWrap.offsetHeight;
 });
 
 tuesday.addEventListener("click", () => {
     displayShows("tue");
+    void contentWrap.offsetHeight;
 });
 
 wednesday.addEventListener("click", () => {
     displayShows("wed");
+    void contentWrap.offsetHeight;
 });
 
 thursday.addEventListener("click", () => {
     displayShows("thu");
+    void contentWrap.offsetHeight;
 });
 
 // --------------------------------------------------------------------------
