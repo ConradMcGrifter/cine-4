@@ -1,5 +1,5 @@
 update the movie schedule inside schedule.js
-update the date range inside getDates.js (inside the functions folder)
+update the date range inside getDates.js (from main.js)
 
 # FUNCTIONS
 
