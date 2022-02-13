@@ -1,4 +1,4 @@
-import { schedule } from "../schedule.js";
+import { schedule } from "../../schedule.js";
 
 // get the local time then use that time and compare it to the showtimes in each card -> gray out any times that have already passed
 // should this code go into the createMovieCards.js file? or displayShows.js?

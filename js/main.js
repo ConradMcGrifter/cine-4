@@ -85,8 +85,6 @@ switch (currentDay) {
 these event listeners Create card elements when specific tab is clicked on by running the displayShows function
 */
 
-let contentWrap = document.querySelector(".content");
-
 friday.addEventListener("click", () => {
     displayShows("fri");
     resetHeight();

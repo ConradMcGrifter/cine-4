@@ -3,14 +3,14 @@ update the date range inside getDates.js (inside the functions folder)
 
 # FUNCTIONS
 
--   createMovieCard.............this function takes parameters from schedule.js and creates the card element + appends to DOM
+-   getDates......................function used to get a range of dates between two dates
 
--   removeCards...................removes all the cards currently in the DOM
+-   resetHeight...................resets the height of the content element (holds the cards) when cards are removed and added
+
+# FUNCTIONS -> DISPLAY
+
+-   createMovieCard.............this function takes parameters from schedule.js and creates the card element + appends to DOM
 
 -   setTrailerSource..............gets all the card trailer elements and adds an event listener "on click" -> adds the data-trailer value to the src of the lightbox iframe. also handles toggling the lightbox from active to inactive
 
 -   displayShows................this function uses the setTrailerSource, createMovieCard, and removeCards functions. it takes a parameter to access a specific movie and day in the schedule.js object
-
--   getDates......................function used to get a range of dates between two dates
-
--   setCardShowtimeDate...........sets what the date is of the tab selected inside the card element above the showtimes
