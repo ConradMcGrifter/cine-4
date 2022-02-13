@@ -76,9 +76,9 @@ export let schedule = {
             tue: ["7:30pm"],
             wed: [""],
             thu: [""],
-            fri: ["5:10pm", "7:30pm"],
-            sat: ["12:30pm", "2:30pm", "5:10pm", "7:30pm"],
-            sun: ["12:30pm", "2:30pm", "5:10pm", "7:30pm"],
+            fri: ["7:30pm"],
+            sat: ["1:45pm", "7:30pm"],
+            sun: ["1:45pm", "7:30pm"],
         },
     },
 
