@@ -77,6 +77,10 @@ h3 {
   padding: 2rem;
 }
 
+.content[data-height-reset] {
+  min-height: auto;
+}
+
 @media only screen and (max-width: 600px) {
   .content {
     -webkit-box-orient: horizontal;

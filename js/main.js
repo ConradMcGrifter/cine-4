@@ -2,9 +2,9 @@ import { displayShows, getDates } from "./functions/index.js";
 
 function resetHeight() {
     let content = document.querySelector(".content");
-    content.style.minHeight = "auto";
+    content.setAttribute("data-height-reset", null);
     content.scrollBy(0, 0);
-    content.style.minHeight = "100%";
+    content.removeAttribute("data-height-reset");
 }
 
 // these are the tabs for each day of the week
