@@ -103,30 +103,37 @@ let contentWrap = document.querySelector(".content");
 
 friday.addEventListener("click", () => {
     displayShows("fri");
+    resetHeight();
 });
 
 saturday.addEventListener("click", () => {
     displayShows("sat");
+    resetHeight();
 });
 
 sunday.addEventListener("click", () => {
     displayShows("sun");
+    resetHeight();
 });
 
 monday.addEventListener("click", () => {
     displayShows("mon");
+    resetHeight();
 });
 
 tuesday.addEventListener("click", () => {
     displayShows("tue");
+    resetHeight();
 });
 
 wednesday.addEventListener("click", () => {
     displayShows("wed");
+    resetHeight();
 });
 
 thursday.addEventListener("click", () => {
     displayShows("thu");
+    resetHeight();
 });
 
 // --------------------------------------------------------------------------
