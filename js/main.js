@@ -47,49 +47,42 @@ switch (currentDay) {
     case 0:
         sunday.setAttribute("data-active", "true");
         days.sunday.querySelector(".tab__day").innerText = "TODAY";
-        resetHeight();
         displayShows("sun");
         break;
 
     case 1:
         monday.setAttribute("data-active", "true");
         monday.querySelector(".tab__day").innerText = "TODAY";
-        resetHeight();
         displayShows("mon");
         break;
 
     case 2:
         tuesday.setAttribute("data-active", "true");
         tuesday.querySelector(".tab__day").innerText = "TODAY";
-        resetHeight();
         displayShows("tue");
         break;
 
     case 3:
         wednesday.setAttribute("data-active", "true");
         wednesday.querySelector(".tab__day").innerText = "TODAY";
-        resetHeight();
         displayShows("wed");
         break;
 
     case 4:
         thursday.setAttribute("data-active", "true");
         thursday.querySelector(".tab__day").innerText = "TODAY";
-        resetHeight();
         displayShows("thu");
         break;
 
     case 5:
         friday.setAttribute("data-active", "true");
         friday.querySelector(".tab__day").innerText = "TODAY";
-        resetHeight();
         displayShows("fri");
         break;
 
     case 6:
         saturday.setAttribute("data-active", "true");
         saturday.querySelector(".tab__day").innerText = "TODAY";
-        resetHeight();
         displayShows("sat");
         break;
 }

@@ -11,6 +11,8 @@
     padding: 2rem;
 
     &[data-height-reset] {
+        // this class is added then removed with javaScript whenever a tab is clicked on and cards are added to the content container
+        // without this class, extra space would remain in the content container whenever more cards were removed than were added
         min-height: unset;
         height: auto;
     }
