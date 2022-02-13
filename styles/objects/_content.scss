@@ -3,15 +3,16 @@
    -------------------------------- */
 
 .content {
-    min-height: 100%;
-    // height: auto;
+    // min-height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
 
     &[data-height-reset] {
-        min-height: auto;
+        min-height: unset;
+        height: auto;
     }
 }
 

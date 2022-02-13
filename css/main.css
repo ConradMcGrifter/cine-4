@@ -63,7 +63,7 @@ h3 {
         OBJECTS -> #content
    -------------------------------- */
 .content {
-  min-height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +78,8 @@ h3 {
 }
 
 .content[data-height-reset] {
-  min-height: auto;
+  min-height: unset;
+  height: auto;
 }
 
 @media only screen and (max-width: 600px) {
