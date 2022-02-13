@@ -1,5 +1,12 @@
 import { displayShows, getDates } from "./functions/index.js";
 
+function resetHeight() {
+    let content = document.querySelector(".content");
+    content.style.minHeight = "auto";
+    content.scrollBy(0, 0);
+    content.style.minHeight = "100%";
+}
+
 // these are the tabs for each day of the week
 let friday = document.querySelector("[data-fri]");
 let saturday = document.querySelector("[data-sat]");
@@ -41,41 +48,48 @@ switch (currentDay) {
         sunday.setAttribute("data-active", "true");
         days.sunday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("sun");
+        resetHeight();
         break;
 
     case 1:
         monday.setAttribute("data-active", "true");
         monday.querySelector(".tab__day").innerText = "TODAY";
+        resetHeight();
         displayShows("mon");
         break;
 
     case 2:
         tuesday.setAttribute("data-active", "true");
         tuesday.querySelector(".tab__day").innerText = "TODAY";
+        resetHeight();
         displayShows("tue");
         break;
 
     case 3:
         wednesday.setAttribute("data-active", "true");
         wednesday.querySelector(".tab__day").innerText = "TODAY";
+        resetHeight();
         displayShows("wed");
         break;
 
     case 4:
         thursday.setAttribute("data-active", "true");
         thursday.querySelector(".tab__day").innerText = "TODAY";
+        resetHeight();
         displayShows("thu");
         break;
 
     case 5:
         friday.setAttribute("data-active", "true");
         friday.querySelector(".tab__day").innerText = "TODAY";
+        resetHeight();
         displayShows("fri");
         break;
 
     case 6:
         saturday.setAttribute("data-active", "true");
         saturday.querySelector(".tab__day").innerText = "TODAY";
+        resetHeight();
         displayShows("sat");
         break;
 }
@@ -89,37 +103,30 @@ let contentWrap = document.querySelector(".content");
 
 friday.addEventListener("click", () => {
     displayShows("fri");
-    void contentWrap.offsetHeight;
 });
 
 saturday.addEventListener("click", () => {
     displayShows("sat");
-    void contentWrap.offsetHeight;
 });
 
 sunday.addEventListener("click", () => {
     displayShows("sun");
-    void contentWrap.offsetHeight;
 });
 
 monday.addEventListener("click", () => {
     displayShows("mon");
-    void contentWrap.offsetHeight;
 });
 
 tuesday.addEventListener("click", () => {
     displayShows("tue");
-    void contentWrap.offsetHeight;
 });
 
 wednesday.addEventListener("click", () => {
     displayShows("wed");
-    void contentWrap.offsetHeight;
 });
 
 thursday.addEventListener("click", () => {
     displayShows("thu");
-    void contentWrap.offsetHeight;
 });
 
 // --------------------------------------------------------------------------
