@@ -1,11 +1,4 @@
-import { displayShows, getDates } from "./functions/index.js";
-
-function resetHeight() {
-    let content = document.querySelector(".content");
-    content.setAttribute("data-height-reset", null);
-    content.scrollBy(0, 0);
-    content.removeAttribute("data-height-reset");
-}
+import { displayShows, getDates, resetHeight } from "./functions/index.js";
 
 // these are the tabs for each day of the week
 let friday = document.querySelector("[data-fri]");
