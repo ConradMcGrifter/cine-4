@@ -33,7 +33,7 @@
 
 .card__title {
     font-weight: 300;
-    font-size: 3rem;
+    font-size: clamp(2.4rem, 5vw, 3rem);
     margin-bottom: 1rem;
 }
 
@@ -67,6 +67,7 @@
 }
 
 .cardTimes__header {
+    font-size: clamp(1.6rem, 3vw, 1.8rem);
     font-weight: 300;
     grid-column: 1 / -1;
 }
@@ -115,7 +116,12 @@
     }
 }
 
-// --------------------------------------
+/*
+----------------------------
+        ANIMATIONS
+----------------------------
+*/
+
 @keyframes transitionIn {
     from {
         opacity: 0;

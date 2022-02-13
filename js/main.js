@@ -31,6 +31,7 @@ import { displayShows, getDates, resetHeight } from "./functions/index.js";
 */
 
 // ------------------# TABS ------------------------------------------
+
 // these are the tabs for each day of the week
 let friday = document.querySelector("[data-fri]");
 let saturday = document.querySelector("[data-sat]");

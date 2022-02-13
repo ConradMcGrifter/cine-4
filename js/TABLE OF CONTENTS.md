@@ -9,6 +9,8 @@ update the date range inside getDates.js (from main.js)
 
 # FUNCTIONS -> DISPLAY
 
+(these functions handle creating and displaying the movie card elements)
+
 -   createMovieCard.............this function takes parameters from schedule.js and creates the card element + appends to DOM
 
 -   setTrailerSource..............gets all the card trailer elements and adds an event listener "on click" -> adds the data-trailer value to the src of the lightbox iframe. also handles toggling the lightbox from active to inactive
