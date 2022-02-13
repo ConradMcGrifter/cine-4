@@ -39,7 +39,7 @@ let currentDay = d.getDay();
 switch (currentDay) {
     case 0:
         sunday.setAttribute("data-active", "true");
-        days.sunday.querySelector(".tab__day").innerText = "TODAY";
+        sunday.querySelector(".tab__day").innerText = "TODAY";
         displayShows("sun");
         break;
 
