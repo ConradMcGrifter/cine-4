@@ -1,3 +1,4 @@
+import { resetHeight } from "../resetHeight.js";
 /*
 this function is used to control the lightbox and adds an event listener "click" to
 each card's "trailer" element that sets the src value of the lightbox iframe (youtube video)
@@ -23,11 +24,13 @@ export function setTrailerSource() {
 
     closeBtn.addEventListener("click", () => {
         lightbox.removeAttribute("data-display");
+        resetHeight();
         video.src = "";
     });
 
     lightbox.addEventListener("click", () => {
         lightbox.removeAttribute("data-display");
+        resetHeight();
         video.src = "";
     });
 }
