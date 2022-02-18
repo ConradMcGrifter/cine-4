@@ -4,8 +4,6 @@
 
 -   make media query mixins for multiple screen sizes
 
--   keep organizing the JS (keep splitting into seperate files)
-
 -   make the synopsis content hidden and click to expand it?
 
 -   add a fade in animation for cards every time a day tab is clicked on
