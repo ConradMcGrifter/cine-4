@@ -1,3 +1,7 @@
+/*
+if a movie doesn't have a showtime on a certain day, add an empty string into the array for that day
+*/
+
 export let schedule = {
     movie1: {
         title: "Death on the Nile",

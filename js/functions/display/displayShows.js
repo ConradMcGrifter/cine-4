@@ -8,7 +8,7 @@ export function displayShows(day) {
     cards.forEach((card) => {
         card.remove();
     });
-    // loop through the movie objects in schedule object
+    // loop through the movie objects from the schedule object
     for (let movie in schedule) {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (schedule[movie].showtimes[day][0] != "") {
