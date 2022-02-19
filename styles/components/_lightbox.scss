@@ -33,8 +33,8 @@
 
 .lightbox__close {
     position: absolute;
-    bottom: 14%;
-    left: 20%;
+    top: 1rem;
+    left: 1rem;
     font-size: 2.4rem;
     padding: 0.5rem;
     cursor: pointer;
@@ -44,14 +44,5 @@
     .lightbox__video {
         width: 95%;
         height: 95%;
-    }
-
-    .lightbox__close {
-        position: absolute;
-        bottom: -20%;
-        left: 40%;
-        font-size: 2.4rem;
-        padding: 0.5rem;
-        cursor: pointer;
     }
 }
