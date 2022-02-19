@@ -10,13 +10,13 @@ export let schedule = {
         poster: "posters/deathOnTheNile.jpg",
         trailer: "https://www.youtube.com/embed/dZRqB0JLizw?autoplay=1",
         showtimes: {
-            mon: ["12:00pm", "2:45pm", "5:15pm", "7:30pm"],
+            mon: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
             tue: ["7:30pm"],
             wed: ["7:30pm"],
             thu: ["7:30pm"],
             fri: ["5:15pm", "7:30pm"],
-            sat: ["12:00pm", "2:45pm", "5:15pm", "7:30pm"],
-            sun: ["12:00pm", "2:45pm", "5:15pm", "7:30pm"],
+            sat: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
+            sun: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
         },
     },
 
@@ -77,13 +77,13 @@ export let schedule = {
         poster: "posters/licoricePizza.jpg",
         trailer: "https://www.youtube.com/embed/ofnXPwUPENo?autoplay=1",
         showtimes: {
-            mon: ["1:45pm", "2:40pm", "7:30pm"],
+            mon: ["1:45pm", "7:30pm"],
             tue: [""],
             wed: ["7:30pm"],
             thu: [""],
             fri: ["5:50pm"],
-            sat: ["1:45pm", "2:40pm", "7:30pm"],
-            sun: ["1:45pm", "2:40pm", "7:30pm"],
+            sat: ["1:45pm", "7:30pm"],
+            sun: ["1:45pm", "7:30pm"],
         },
     },
 
