@@ -28,9 +28,10 @@ export function setTrailerSource() {
         video.src = "";
     });
 
-    lightbox.addEventListener("click", () => {
-        lightbox.removeAttribute("data-display");
-        resetHeight();
-        video.src = "";
-    });
+    // this closes the lightbox when any part of the screen is clicked on
+    // lightbox.addEventListener("click", () => {
+    //     lightbox.removeAttribute("data-display");
+    //     resetHeight();
+    //     video.src = "";
+    // });
 }

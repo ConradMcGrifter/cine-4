@@ -418,7 +418,7 @@ h3 {
 .lightbox {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: rgba(0, 0, 0, 0.966);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -473,11 +473,20 @@ h3 {
 
 .lightbox__close {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  background: none;
+  border: none;
+  top: 2rem;
+  right: 2rem;
   font-size: 2.4rem;
   padding: 0.5rem;
   cursor: pointer;
+  z-index: 999;
+}
+
+.lightbox__close-img {
+  width: 3rem;
+  height: 3rem;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 1200px) {
