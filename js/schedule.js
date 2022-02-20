@@ -112,6 +112,10 @@ for (let movie in schedule) {
     console.log(schedule[movie].title);
     // loop through each day in the movie object
     for (let day in schedule[movie].showtimes) {
+        // if the day doesn't have any showtimes -> skip it
+        if (schedule[movie].showtimes[day][0] === "") {
+            continue;
+        }
         console.log(day);
         // loop through all the times
         for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {
