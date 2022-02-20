@@ -118,20 +118,39 @@ scheduleBtn.addEventListener("click", () => {
     cards.forEach((card) => {
         card.remove();
     });
-});
 
-for (let movie in schedule) {
-    console.log(schedule[movie].title);
-    // loop through each day in the movie object
-    for (let day in schedule[movie].showtimes) {
-        // if the day doesn't have any showtimes -> skip it
-        if (schedule[movie].showtimes[day][0] === "") {
-            continue;
-        }
-        console.log(day);
-        // loop through all the times
-        for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {
-            console.log(schedule[movie].showtimes[day][i]);
+    for (let movie in schedule) {
+        console.log(schedule[movie].title);
+
+        let movieTitle = document.createElement("h2");
+        movieTitle.setAttribute("data-schedule-title", null);
+        movieTitle.innerText = schedule[movie].title;
+        container.append(movieTitle);
+
+        // loop through each day in the movie object
+        for (let day in schedule[movie].showtimes) {
+            // if the day doesn't have any showtimes -> skip it
+            if (schedule[movie].showtimes[day][0] === "") {
+                continue;
+            }
+            console.log(day);
+
+            let dayWrap = document.createElement("div");
+            let weekday = document.createElement("h3");
+            weekday.innerText = `${day}: `;
+            dayWrap.append(weekday);
+            container.append(dayWrap);
+            // for now the styles for this are in base.scss
+            dayWrap.setAttribute("data-dayWrap", null);
+
+            // loop through all the times
+            for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {
+                console.log(schedule[movie].showtimes[day][i]);
+
+                let time = document.createElement("p");
+                time.innerText = `\u00A0 ${schedule[movie].showtimes[day][i]},`;
+                dayWrap.append(time);
+            }
         }
     }
-}
+});

@@ -46,6 +46,20 @@ h3 {
   font-family: "Rowdies", sans-serif;
 }
 
+[data-dayWrap] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+[data-schedule-title] {
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+
 /* --------------------------------
         OBJECTS -> #site-grid
    -------------------------------- */
