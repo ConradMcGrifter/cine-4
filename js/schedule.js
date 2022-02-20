@@ -10,13 +10,13 @@ export let schedule = {
         poster: "posters/deathOnTheNile.jpg",
         trailer: "https://www.youtube.com/embed/dZRqB0JLizw?autoplay=1",
         showtimes: {
+            fri: ["5:15pm", "7:30pm"],
+            sat: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
+            sun: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
             mon: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
             tue: ["7:30pm"],
             wed: ["7:30pm"],
             thu: ["7:30pm"],
-            fri: ["5:15pm", "7:30pm"],
-            sat: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
-            sun: ["12:20pm", "2:45pm", "5:15pm", "7:30pm"],
         },
     },
 
@@ -27,13 +27,13 @@ export let schedule = {
         poster: "posters/jockey.jpg",
         trailer: "https://www.youtube.com/embed/YWI6Q-yKFbc?autoplay=1",
         showtimes: {
+            fri: ["5:50pm"],
+            sat: ["12:00pm", "4:00pm"],
+            sun: ["12:00pm", "4:00pm"],
             mon: ["12:00pm", "4:00pm"],
             tue: ["7:30pm"],
             wed: [""],
             thu: ["7:30pm"],
-            fri: ["5:50pm"],
-            sat: ["12:00pm", "4:00pm"],
-            sun: ["12:00pm", "4:00pm"],
         },
     },
 
@@ -44,13 +44,13 @@ export let schedule = {
         poster: "posters/belfastPoster.jpg",
         trailer: "https://www.youtube.com/embed/Ja3PPOnJQ2k?autoplay=1",
         showtimes: {
+            fri: ["4:00pm", "7:30pm"],
+            sat: ["12:00pm", "2:40pm", "5:40pm", "7:30pm"],
+            sun: ["12:00pm", "2:40pm", "5:40pm", "7:30pm"],
             mon: ["12:00pm", "2:40pm", "5:40pm", "7:30pm"],
             tue: ["7:30pm"],
             wed: ["7:30pm"],
             thu: ["7:30pm"],
-            fri: ["4:00pm", "7:30pm"],
-            sat: ["12:00pm", "2:40pm", "5:40pm", "7:30pm"],
-            sun: ["12:00pm", "2:40pm", "5:40pm", "7:30pm"],
         },
     },
     movie4: {
@@ -60,13 +60,13 @@ export let schedule = {
         poster: "posters/parallelMothers.jpg",
         trailer: "https://www.youtube.com/embed/cL6JDYkRa2g?autoplay=1",
         showtimes: {
+            fri: ["5:15pm", "7:30pm"],
+            sat: ["1:45pm", "7:30pm"],
+            sun: ["1:45pm", "7:30pm"],
             mon: ["1:45pm", "7:30pm"],
             tue: ["7:30pm"],
             wed: ["7:30pm"],
             thu: [""],
-            fri: ["5:15pm", "7:30pm"],
-            sat: ["1:45pm", "7:30pm"],
-            sun: ["1:45pm", "7:30pm"],
         },
     },
 
@@ -77,13 +77,13 @@ export let schedule = {
         poster: "posters/licoricePizza.jpg",
         trailer: "https://www.youtube.com/embed/ofnXPwUPENo?autoplay=1",
         showtimes: {
+            fri: ["5:50pm"],
+            sat: ["1:45pm", "7:30pm"],
+            sun: ["1:45pm", "7:30pm"],
             mon: ["1:45pm", "7:30pm"],
             tue: [""],
             wed: ["7:30pm"],
             thu: [""],
-            fri: ["5:50pm"],
-            sat: ["1:45pm", "7:30pm"],
-            sun: ["1:45pm", "7:30pm"],
         },
     },
 
@@ -94,13 +94,13 @@ export let schedule = {
         poster: "posters/WSSposter.jpg",
         trailer: "https://www.youtube.com/embed/A5GJLwWiYSg?autoplay=1",
         showtimes: {
+            fri: ["4:30pm"],
+            sat: ["12:00pm", "4:30pm"],
+            sun: ["12:00pm", "4:30pm"],
             mon: ["12:00pm", "4:30pm"],
             tue: [""],
             wed: [""],
             thu: ["7:30pm"],
-            fri: ["4:30pm"],
-            sat: ["12:00pm", "4:30pm"],
-            sun: ["12:00pm", "4:30pm"],
         },
     },
 };
@@ -108,13 +108,12 @@ export let schedule = {
 // -------- this will be used to print the full schedule of showtimes
 let times = schedule.movie1.showtimes;
 
-let days = ["fri", "sat", "sun", "mon", "tue", "wed", "thu"];
-
-// for each day in the times object -> print out the day + showtimes on each day
-console.log(schedule.movie1.title);
-for (let day in times) {
-    console.log(day);
-    for (let i = 0; i < times[day].length; i++) {
-        console.log(times[day][i]);
+for (let movie in schedule) {
+    console.log(schedule[movie].title);
+    for (let day in schedule[movie].showtimes) {
+        console.log(day);
+        for (let i = 0; i < times[day].length; i++) {
+            console.log(times[day][i]);
+        }
     }
 }
