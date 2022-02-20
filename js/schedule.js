@@ -104,3 +104,17 @@ export let schedule = {
         },
     },
 };
+
+// -------- this will be used to print the full schedule of showtimes
+let times = schedule.movie1.showtimes;
+
+let days = ["fri", "sat", "sun", "mon", "tue", "wed", "thu"];
+
+// for each day in the times object -> print out the day + showtimes on each day
+console.log(schedule.movie1.title);
+for (let day in times) {
+    console.log(day);
+    for (let i = 0; i < times[day].length; i++) {
+        console.log(times[day][i]);
+    }
+}
