@@ -328,6 +328,9 @@ h3 {
 .header__nav {
   max-width: 95rem;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__logo {
@@ -339,6 +342,33 @@ h3 {
   color: white;
   font-size: 1.6rem;
   font-weight: 300;
+}
+
+.header__fullScheduleLink {
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: white;
+  font-family: "Roboto", arial;
+  font-size: 1.6rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+@media only screen and (max-width: 650px) {
+  .header__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__fullScheduleLink {
+    margin-left: unset;
+    margin-right: auto;
+  }
 }
 
 /* --------------------------------

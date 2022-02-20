@@ -11,6 +11,7 @@
 .header__nav {
     max-width: $max-width;
     width: 100%;
+    display: flex;
 }
 
 .header__logo {
@@ -21,5 +22,29 @@
         color: white;
         font-size: 1.6rem;
         font-weight: 300;
+    }
+}
+
+.header__fullScheduleLink {
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-family: $body-fontStack;
+    font-size: 1.6rem;
+    height: max-content;
+}
+
+// this is only temporary -> need to make a hamburger mobile menu
+@media only screen and (max-width: 650px) {
+    .header__nav {
+        flex-direction: column;
+    }
+
+    .header__fullScheduleLink {
+        margin-left: unset;
+        margin-right: auto;
     }
 }
