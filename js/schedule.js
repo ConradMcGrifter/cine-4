@@ -106,14 +106,13 @@ export let schedule = {
 };
 
 // -------- this will be used to print the full schedule of showtimes
-let times = schedule.movie1.showtimes;
 
 for (let movie in schedule) {
     console.log(schedule[movie].title);
     for (let day in schedule[movie].showtimes) {
         console.log(day);
-        for (let i = 0; i < times[day].length; i++) {
-            console.log(times[day][i]);
+        for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {
+            console.log(schedule[movie].showtimes[day][i]);
         }
     }
 }
