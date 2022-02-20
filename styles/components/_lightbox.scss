@@ -5,7 +5,7 @@
 .lightbox {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.966);
+    background-color: rgba(0, 0, 0, 0.89);
     @include flexCenter(column);
     display: none;
 
@@ -34,18 +34,19 @@
 .lightbox__close {
     position: absolute;
     background: none;
-    border: none;
+    border: 2px solid white;
     top: 2rem;
     right: 2rem;
     font-size: 2.4rem;
-    padding: 0.5rem;
+    padding: 1rem;
     cursor: pointer;
     z-index: 999;
+    border-radius: 999px;
 }
 
 .lightbox__close-img {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     pointer-events: none;
 }
 
@@ -53,5 +54,16 @@
     .lightbox__video {
         width: 95%;
         height: 95%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .lightbox__close {
+        border: none;
+    }
+
+    .lightbox__close-img {
+        width: 3rem;
+        height: 3rem;
     }
 }
