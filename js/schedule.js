@@ -108,6 +108,18 @@ export let schedule = {
 // -------- this will be used to print the full schedule of showtimes
 
 // loop through each movie in the schedule object
+
+let scheduleBtn = document.querySelector("[data-schedule-button]");
+let container = document.querySelector("[data-cards-wrapper]");
+
+scheduleBtn.addEventListener("click", () => {
+    // remove all cards in the DOM
+    let cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+        card.remove();
+    });
+});
+
 for (let movie in schedule) {
     console.log(schedule[movie].title);
     // loop through each day in the movie object
