@@ -543,6 +543,7 @@ h3 {
 [data-schedule-title] {
   margin-top: 2rem;
   text-decoration: underline;
+  font-family: "Roboto", arial;
 }
 
 [data-schedule-day] {
