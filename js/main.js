@@ -1,4 +1,5 @@
 import { displayShows, getDates, resetHeight } from "./functions/index.js";
+import { schedule } from "./schedule.js";
 
 /*
 
@@ -27,6 +28,10 @@ import { displayShows, getDates, resetHeight } from "./functions/index.js";
 # SET ACTIVE AND INACTIVE TABS
 
   - loops through all the tabs and sets them to receive active or inactive styles.
+
+# DISPLAY FULL SHOWTIME SCHEDULE
+
+  - creates a list of all the movies and all the showtimes for the week
 
 */
 
@@ -169,4 +174,63 @@ tabs.forEach((tab) => {
     });
 });
 
-//----------------------------------------------------------------------------
+// ------------------# DISPLAY FULL SHOWTIME SCHEDULE----------------------------------------
+
+let scheduleBtn = document.querySelector("[data-schedule-button]");
+let container = document.querySelector("[data-cards-wrapper]");
+
+scheduleBtn.addEventListener("click", () => {
+    // remove all cards in the DOM
+    let cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+        card.remove();
+    });
+
+    for (let movie in schedule) {
+        // create the elements
+        let movieTitle = document.createElement("h2");
+
+        // add the movie title from the movie object into the created elements
+        movieTitle.innerText = schedule[movie].title;
+
+        // add data attribute for styling
+        movieTitle.setAttribute("data-schedule-title", null);
+
+        container.append(movieTitle);
+
+        // loop through each day in the movie object
+        for (let day in schedule[movie].showtimes) {
+            // if the day doesn't have any showtimes -> skip it
+            if (schedule[movie].showtimes[day][0] === "") {
+                continue;
+            }
+            // create the elements
+            let dayWrap = document.createElement("div");
+            let weekday = document.createElement("h3");
+
+            // add the content from the schedule movie object into the created elements
+            weekday.innerText = `${day}: `;
+            dayWrap.append(weekday);
+
+            // set data attributes to the created elements
+            weekday.setAttribute("data-schedule-day", null);
+            dayWrap.setAttribute("data-schedule-day--wrap", null);
+
+            container.append(dayWrap);
+
+            // loop through all the times
+            for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {
+                let time = document.createElement("p");
+
+                // check if the time is the last one in the array
+                // if it is the last time, dont add an ","
+                if (i + 1 == schedule[movie].showtimes[day].length) {
+                    time.innerText = `\u00A0 ${schedule[movie].showtimes[day][i]}`;
+                } else {
+                    time.innerText = `\u00A0 ${schedule[movie].showtimes[day][i]},`;
+                }
+                dayWrap.append(time);
+            }
+        }
+    }
+});

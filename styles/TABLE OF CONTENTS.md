@@ -8,6 +8,7 @@
 -   card........................holds the synopisis + poster + showtimes
 -   tab.........................shows the day of the week and the date
 -   lightbox....................this holds the iframe for movie trailers
+-   schedule....................styles for the full schedule that is created and displayed with javaScript
 
 # OBJECTS
 

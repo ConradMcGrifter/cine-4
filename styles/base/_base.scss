@@ -33,13 +33,3 @@ h2,
 h3 {
     font-family: $header-fontStack;
 }
-
-[data-dayWrap] {
-    display: flex;
-    align-items: baseline;
-}
-
-[data-schedule-title] {
-    margin-top: 2rem;
-    text-decoration: underline;
-}

@@ -1,0 +1,17 @@
+/* --------------------------------
+        COMPONENTS -> #schedule
+   -------------------------------- */
+
+[data-schedule-title] {
+    margin-top: 2rem;
+    text-decoration: underline;
+}
+
+[data-schedule-day] {
+    font-family: $body-fontStack;
+}
+
+[data-schedule-day--wrap] {
+    display: flex;
+    align-items: baseline;
+}
