@@ -180,17 +180,26 @@ scheduleBtn.addEventListener("click", () => {
         card.remove();
     });
 
+    // if the container already has the schedule in it, return.
+    if (container.querySelectorAll("[data-schedule-movie--wrap]").length > 0) {
+        return;
+    }
+
+    // loop through each movie in the schedule object
     for (let movie in schedule) {
         // create the elements
         let movieTitle = document.createElement("h2");
+        let movieWrap = document.createElement("div");
 
         // add the movie title from the movie object into the created elements
         movieTitle.innerText = schedule[movie].title;
 
         // add data attribute for styling
         movieTitle.setAttribute("data-schedule-title", null);
+        movieWrap.setAttribute("data-schedule-movie--wrap", null);
 
-        container.append(movieTitle);
+        movieWrap.append(movieTitle);
+        container.append(movieWrap);
 
         // loop through each day in the movie object
         for (let day in schedule[movie].showtimes) {
@@ -210,7 +219,7 @@ scheduleBtn.addEventListener("click", () => {
             weekday.setAttribute("data-schedule-day", null);
             dayWrap.setAttribute("data-schedule-day--wrap", null);
 
-            container.append(dayWrap);
+            movieWrap.append(dayWrap);
 
             // loop through all the times
             for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {

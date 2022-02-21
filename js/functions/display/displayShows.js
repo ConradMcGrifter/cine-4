@@ -8,6 +8,15 @@ export function displayShows(day) {
     cards.forEach((card) => {
         card.remove();
     });
+
+    // if the full schedule of showtimes is displayed -> remove it
+    let fullShowtimes = document.querySelectorAll(
+        "[data-schedule-movie--wrap]"
+    );
+    fullShowtimes.forEach((movie) => {
+        movie.remove();
+    });
+
     // loop through the movie objects from the schedule object
     for (let movie in schedule) {
         // if the movie object has show times for the specific day, create card ele + add showtimes
