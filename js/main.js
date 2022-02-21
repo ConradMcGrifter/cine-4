@@ -6,31 +6,25 @@ import { schedule } from "./schedule.js";
 ************** TABLE OF CONTENTS **************
 
 # TABS
-
   - these are the tabs for each day of the week
 
 # SET DATES RANGE
-
   - use the getDates function to get a range of dates between two dates
     then get all the tab elements in an array
     then loop through each tab and put in each date from the dateRange array
 
 # CREATE CARDS ON PAGE LOAD
-
   - this switch statement receives what the current day is as a parameter and sets 
     the active tab based on whatever day it is. then it creates card elements for the specific day
     it runs when the page first loads
 
 # TAB EVENT LISTENERS
-
   - these event listeners Create card elements when specific tab is clicked on by running the displayShows function
 
 # SET ACTIVE AND INACTIVE TABS
-
   - loops through all the tabs and sets them to receive active or inactive styles.
 
 # DISPLAY FULL SHOWTIME SCHEDULE
-
   - creates a list of all the movies and all the showtimes for the week
 
 */
