@@ -174,6 +174,8 @@ let scheduleBtn = document.querySelector("[data-schedule-button]");
 let container = document.querySelector("[data-cards-wrapper]");
 
 scheduleBtn.addEventListener("click", () => {
+    resetHeight();
+
     // remove all cards in the DOM
     let cards = document.querySelectorAll(".card");
     cards.forEach((card) => {
