@@ -215,7 +215,7 @@ scheduleBtn.addEventListener("click", () => {
             weekday.innerText = `${day}: `;
             dayWrap.append(weekday);
 
-            // set data attributes to the created elements
+            // set data attributes for styling
             weekday.setAttribute("data-schedule-day", null);
             dayWrap.setAttribute("data-schedule-day--wrap", null);
 
@@ -224,7 +224,7 @@ scheduleBtn.addEventListener("click", () => {
             // loop through all the times
             for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {
                 let time = document.createElement("p");
-
+                time.setAttribute("data-schedule-time", null);
                 // check if the time is the last one in the array
                 // if it is the last time, dont add an ","
                 if (i + 1 == schedule[movie].showtimes[day].length) {

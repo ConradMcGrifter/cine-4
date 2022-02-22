@@ -540,14 +540,19 @@ h3 {
 /* --------------------------------
         COMPONENTS -> #schedule
    -------------------------------- */
-[data-schedule-title] {
+[data-schedule-movie--wrap] + [data-schedule-movie--wrap] {
   margin-top: 2rem;
+}
+
+[data-schedule-title] {
   text-decoration: underline;
   font-family: "Roboto", arial;
+  font-size: clamp(2.4rem, 3vw, 3rem);
 }
 
 [data-schedule-day] {
   font-family: "Roboto", arial;
+  font-size: clamp(1.6rem, 2vw, 2rem);
 }
 
 [data-schedule-day--wrap] {
@@ -557,5 +562,9 @@ h3 {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+}
+
+[data-schedule-time] {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 /*# sourceMappingURL=main.css.map */
