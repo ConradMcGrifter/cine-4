@@ -28,6 +28,7 @@ import { schedule } from "./schedule.js";
   - creates a list of all the movies and all the showtimes for the week
 
 # HAMBURGER MOBILE MENU
+  - logic for opening and closing the mobile nav menu
 
 */
 
