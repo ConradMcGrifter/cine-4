@@ -27,6 +27,8 @@ import { schedule } from "./schedule.js";
 # DISPLAY FULL SHOWTIME SCHEDULE
   - creates a list of all the movies and all the showtimes for the week
 
+# HAMBURGER MOBILE MENU
+
 */
 
 // ------------------# TABS ------------------------------------------
@@ -182,6 +184,11 @@ let scheduleBtn = document.querySelector("[data-schedule-button]");
 let container = document.querySelector("[data-cards-wrapper]");
 
 scheduleBtn.addEventListener("click", () => {
+    // if on mobile, this will close the mobile menu + lightbox
+    mobileMenu.removeAttribute("data-display");
+    lightbox.removeAttribute("data-display");
+    lightboxCloseBtn.removeAttribute("data-visibility");
+
     // remove all cards in the DOM
     let cards = document.querySelectorAll(".card");
     cards.forEach((card) => {
@@ -246,4 +253,25 @@ scheduleBtn.addEventListener("click", () => {
             }
         }
     }
+});
+
+// ------------------# HAMBURGER MOBILE MENU----------------------------------------
+
+const hamburger = document.querySelector(".header__hamburger");
+const mobileCloseBtn = document.querySelector(".header__closeBtn");
+const mobileMenu = document.querySelector(".header__links");
+const lightbox = document.querySelector(".lightbox");
+const lightboxCloseBtn = document.querySelector(".lightbox__close");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.setAttribute("data-display", "visible");
+    lightbox.setAttribute("data-display", "true");
+    // since this uses the same lightbox that the trailers use, the lightbox close button needs to be hidden
+    lightboxCloseBtn.setAttribute("data-visibility", "hidden");
+});
+
+mobileCloseBtn.addEventListener("click", () => {
+    mobileMenu.removeAttribute("data-display");
+    lightbox.removeAttribute("data-display");
+    lightboxCloseBtn.removeAttribute("data-visibility");
 });
