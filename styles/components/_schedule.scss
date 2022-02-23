@@ -16,7 +16,7 @@
 
 [data-schedule-day] {
     font-family: $body-fontStack;
-    font-size: clamp(1.6rem, 2vw, 2rem);
+    font-size: clamp(1.8rem, 2vw, 2rem);
 }
 
 [data-schedule-day--wrap] {
@@ -25,5 +25,5 @@
 }
 
 [data-schedule-time] {
-    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
 }

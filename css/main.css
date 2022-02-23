@@ -537,7 +537,7 @@ h3 {
 
 [data-schedule-day] {
   font-family: "Roboto", arial;
-  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-size: clamp(1.8rem, 2vw, 2rem);
 }
 
 [data-schedule-day--wrap] {
@@ -550,6 +550,6 @@ h3 {
 }
 
 [data-schedule-time] {
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 /*# sourceMappingURL=main.css.map */
