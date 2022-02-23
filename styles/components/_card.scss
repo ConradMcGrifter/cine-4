@@ -112,7 +112,8 @@
 
 @media only screen and (max-width: 450px) {
     .cardTimes-wrap {
-        place-content: center;
+        // place-content: center;
+        padding: 2rem;
     }
 }
 

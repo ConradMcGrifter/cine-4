@@ -17,13 +17,18 @@
 
 @media only screen and (max-width: 600px) {
     .tabs-wrapper {
-        flex-direction: column;
-        width: max-content;
-        margin-right: 1rem;
+        // flex-direction: column;
+        // width: max-content;
+        // margin-right: 1rem;
+        margin-bottom: 1rem;
         height: 100%;
+        max-width: unset;
+        width: 100vw;
+        overflow-x: scroll;
 
         .wrap {
-            flex-direction: column;
+            width: max-content;
+            // flex-direction: column;
             position: sticky;
             top: 2rem;
         }

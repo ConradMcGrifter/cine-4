@@ -61,42 +61,50 @@ switch (currentDay) {
     case 0:
         sunday.setAttribute("data-active", "true");
         sunday.querySelector(".tab__day").innerText = "TODAY";
+        sunday.scrollIntoView({ behavior: "smooth", inline: "start" });
+
         displayShows("sun");
         break;
 
     case 1:
         monday.setAttribute("data-active", "true");
         monday.querySelector(".tab__day").innerText = "TODAY";
+        monday.scrollIntoView({ behavior: "smooth", inline: "start" });
         displayShows("mon");
         break;
 
     case 2:
         tuesday.setAttribute("data-active", "true");
         tuesday.querySelector(".tab__day").innerText = "TODAY";
+        tuesday.scrollIntoView({ behavior: "smooth", inline: "start" });
         displayShows("tue");
         break;
 
     case 3:
         wednesday.setAttribute("data-active", "true");
         wednesday.querySelector(".tab__day").innerText = "TODAY";
+        wednesday.scrollIntoView({ behavior: "smooth", inline: "start" });
         displayShows("wed");
         break;
 
     case 4:
         thursday.setAttribute("data-active", "true");
         thursday.querySelector(".tab__day").innerText = "TODAY";
+        thursday.scrollIntoView({ behavior: "smooth", inline: "start" });
         displayShows("thu");
         break;
 
     case 5:
         friday.setAttribute("data-active", "true");
         friday.querySelector(".tab__day").innerText = "TODAY";
+        friday.scrollIntoView({ behavior: "smooth", inline: "start" });
         displayShows("fri");
         break;
 
     case 6:
         saturday.setAttribute("data-active", "true");
         saturday.querySelector(".tab__day").innerText = "TODAY";
+        saturday.scrollIntoView({ behavior: "smooth", inline: "start" });
         displayShows("sat");
         break;
 }
