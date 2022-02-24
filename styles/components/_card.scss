@@ -31,14 +31,28 @@
     flex-direction: column;
 }
 
-.card__title {
-    font-weight: 300;
-    font-size: clamp(2.4rem, 5vw, 3rem);
+.title-wrap {
+    display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
+.card__title {
+    font-weight: 300;
+    font-size: clamp(2.4rem, 5vw, 3rem);
+}
+
 .card__rating {
-    // styles
+    color: white;
+    background: rgb(17, 17, 17);
+    margin-left: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: $border-radius;
+    width: max-content;
+    height: max-content;
+    border: solid white 1px;
+    font-family: $header-fontStack;
+    font-weight: 300;
 }
 
 .card__synopsis {

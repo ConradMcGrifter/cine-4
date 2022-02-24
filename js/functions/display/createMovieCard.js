@@ -51,6 +51,7 @@ export const createMovieCard = (movie, day) => {
 
     // get all elements that will receive content from the movie object
     let title = movieCard.querySelector("[data-title]");
+    let rating = movieCard.querySelector("[data-rating]");
     let poster = movieCard.querySelector("[data-poster]");
     let synopsis = movieCard.querySelector("[data-synopsis]");
     let trailer = movieCard.querySelector("[data-trailer]");
@@ -58,6 +59,7 @@ export const createMovieCard = (movie, day) => {
 
     // add content from movie object into the card component
     title.textContent = movieObj.title;
+    rating.textContent = movieObj.rating;
     poster.src = `${movieObj.poster}`;
     synopsis.textContent = movieObj.synopsis;
     trailer.setAttribute("data-trailer", movieObj.trailer);

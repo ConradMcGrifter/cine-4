@@ -182,10 +182,36 @@ h3 {
           flex-direction: column;
 }
 
+.title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
 .card__title {
   font-weight: 300;
   font-size: clamp(2.4rem, 5vw, 3rem);
-  margin-bottom: 1rem;
+}
+
+.card__rating {
+  color: white;
+  background: #111111;
+  margin-left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: solid white 1px;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
 }
 
 .card__synopsis {
