@@ -46,7 +46,7 @@ let thursday = document.querySelector("[data-thu]");
 // ------------------# SET DATE RANGE----------------------------------------
 
 // set the start and end date for the week of showtimes
-let dateRange = getDates(new Date(2022, 1, 25), new Date(2022, 2, 3));
+let dateRange = getDates(new Date(2022, 1, 25), new Date(2022, 2, 10));
 // get all the date elements from the DOM
 let dates = document.querySelectorAll("[data-date]");
 // loop through each date and change the innerText to the month and day from the dateRange array
@@ -165,7 +165,8 @@ tabs.forEach((tab) => {
 tabs.forEach((tab) => {
     // if the tab comes before the tab that is set to active on page load by the switch statement -> set its data-active attribute to false
     if (tabs.indexOf(tab) < currentTabIndex) {
-        tab.setAttribute("data-active", "false");
+        // tab.setAttribute("data-active", "false");
+        tab.remove();
     }
     // set active tab styles when a tab is clicked on -> ignore tabs that have data-active="false" (grayed out tabs)
     tab.addEventListener("click", () => {

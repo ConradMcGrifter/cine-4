@@ -111,17 +111,20 @@ h3 {
    ----------------------------------------------------- */
 .tabs-wrapper {
   max-width: 95rem;
-  width: 100%;
+  width: calc(100vw - 4rem);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-x: scroll;
 }
 
 .tabs-wrapper .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   margin-bottom: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -469,6 +472,7 @@ h3 {
 .tab {
   background-color: #b8b8b8;
   padding: 1rem;
+  min-width: 12rem;
   width: 100%;
   text-align: center;
   color: black;
@@ -483,8 +487,7 @@ h3 {
 }
 
 .tab[data-active="false"] {
-  pointer-events: none;
-  opacity: 0.25;
+  display: none;
 }
 
 .tab + .tab {
@@ -522,7 +525,10 @@ h3 {
 
 @media only screen and (max-width: 600px) {
   .tab {
-    width: 100%;
+    min-width: unset;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   .tab__day {
     font-size: 1.6rem;

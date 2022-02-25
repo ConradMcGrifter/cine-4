@@ -5,6 +5,7 @@
 .tab {
     background-color: rgb(184, 184, 184);
     padding: 1rem;
+    min-width: 12rem;
     width: 100%;
     text-align: center;
     color: black;
@@ -18,8 +19,9 @@
     }
 
     &[data-active="false"] {
-        pointer-events: none;
-        opacity: 0.25;
+        // pointer-events: none;
+        // opacity: 0.25;
+        display: none;
     }
 
     & + .tab {
@@ -60,7 +62,8 @@
 
 @media only screen and (max-width: 600px) {
     .tab {
-        width: 100%;
+        min-width: unset;
+        width: max-content;
         // border-radius: 0 $border-radius $border-radius 0;
 
         // & + .tab {
