@@ -110,3 +110,7 @@ export let schedule = {
         },
     },
 };
+
+// --------- next week schedule
+
+export let nextSchedule = {};

@@ -2,7 +2,12 @@ import { createMovieCard } from "./createMovieCard.js";
 import { setTrailerSource } from "./setTrailerSource.js";
 import { schedule } from "../../schedule.js";
 
-export function displayShows(day) {
+export function displayShows(day, obj) {
+    if (Object.keys(obj).length == 0) {
+        console.log("shee");
+        document.querySelector(".cards-wrapper").innerText =
+            "no showtimes available for this day";
+    }
     // remove all cards currently in the DOM
     let cards = document.querySelectorAll(".card");
     cards.forEach((card) => {
@@ -18,9 +23,9 @@ export function displayShows(day) {
     });
 
     // loop through the movie objects from the schedule object
-    for (let movie in schedule) {
+    for (let movie in obj) {
         // if the movie object has show times for the specific day, create card ele + add showtimes
-        if (schedule[movie].showtimes[day][0] != "") {
+        if (obj[movie].showtimes[day][0] != "") {
             createMovieCard(movie, day);
             setTrailerSource();
         }

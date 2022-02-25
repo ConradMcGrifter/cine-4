@@ -1,5 +1,5 @@
 import { displayShows, getDates, resetHeight } from "./functions/index.js";
-import { schedule } from "./schedule.js";
+import { schedule, nextSchedule } from "./schedule.js";
 
 /*
 
@@ -34,7 +34,7 @@ import { schedule } from "./schedule.js";
 
 // ------------------# TABS ------------------------------------------
 
-// these are the tabs for each day of the week
+// these are the tabs for each day of the current week
 let friday = document.querySelector("[data-fri]");
 let saturday = document.querySelector("[data-sat]");
 let sunday = document.querySelector("[data-sun]");
@@ -42,6 +42,15 @@ let monday = document.querySelector("[data-mon]");
 let tuesday = document.querySelector("[data-tue]");
 let wednesday = document.querySelector("[data-wed]");
 let thursday = document.querySelector("[data-thu]");
+
+// next week tabs
+let nextFriday = document.querySelector("[data-next-fri]");
+let nextSaturday = document.querySelector("[data-next-sat]");
+let nextSunday = document.querySelector("[data-next-sun]");
+let nextMonday = document.querySelector("[data-next-mon]");
+let nextTuesday = document.querySelector("[data-next-tue]");
+let nextWednesday = document.querySelector("[data-next-wed]");
+let nextThursday = document.querySelector("[data-next-thu]");
 
 // ------------------# SET DATE RANGE----------------------------------------
 
@@ -66,85 +75,122 @@ switch (currentDay) {
         sunday.querySelector(".tab__day").innerText = "TODAY";
         sunday.scrollIntoView({ behavior: "smooth", inline: "start" });
 
-        displayShows("sun");
+        displayShows("sun", schedule);
         break;
 
     case 1:
         monday.setAttribute("data-active", "true");
         monday.querySelector(".tab__day").innerText = "TODAY";
         monday.scrollIntoView({ behavior: "smooth", inline: "start" });
-        displayShows("mon");
+        displayShows("mon", schedule);
         break;
 
     case 2:
         tuesday.setAttribute("data-active", "true");
         tuesday.querySelector(".tab__day").innerText = "TODAY";
         tuesday.scrollIntoView({ behavior: "smooth", inline: "start" });
-        displayShows("tue");
+        displayShows("tue", schedule);
         break;
 
     case 3:
         wednesday.setAttribute("data-active", "true");
         wednesday.querySelector(".tab__day").innerText = "TODAY";
         wednesday.scrollIntoView({ behavior: "smooth", inline: "start" });
-        displayShows("wed");
+        displayShows("wed", schedule);
         break;
 
     case 4:
         thursday.setAttribute("data-active", "true");
         thursday.querySelector(".tab__day").innerText = "TODAY";
         thursday.scrollIntoView({ behavior: "smooth", inline: "start" });
-        displayShows("thu");
+        displayShows("thu", schedule);
         break;
 
     case 5:
         friday.setAttribute("data-active", "true");
         friday.querySelector(".tab__day").innerText = "TODAY";
         friday.scrollIntoView({ behavior: "smooth", inline: "start" });
-        displayShows("fri");
+        displayShows("fri", schedule);
         break;
 
     case 6:
         saturday.setAttribute("data-active", "true");
         saturday.querySelector(".tab__day").innerText = "TODAY";
         saturday.scrollIntoView({ behavior: "smooth", inline: "start" });
-        displayShows("sat");
+        displayShows("sat", schedule);
         break;
 }
 // ------------------# TAB EVENT LISTENERS-----------------------------------------------
 
 friday.addEventListener("click", () => {
-    displayShows("fri");
+    displayShows("fri", schedule);
     resetHeight();
 });
 
 saturday.addEventListener("click", () => {
-    displayShows("sat");
+    displayShows("sat", schedule);
     resetHeight();
 });
 
 sunday.addEventListener("click", () => {
-    displayShows("sun");
+    displayShows("sun", schedule);
     resetHeight();
 });
 
 monday.addEventListener("click", () => {
-    displayShows("mon");
+    displayShows("mon", schedule);
     resetHeight();
 });
 
 tuesday.addEventListener("click", () => {
-    displayShows("tue");
+    displayShows("tue", schedule);
     resetHeight();
 });
 
 wednesday.addEventListener("click", () => {
-    displayShows("wed");
+    displayShows("wed", schedule);
     resetHeight();
 });
 
 thursday.addEventListener("click", () => {
-    displayShows("thu");
+    displayShows("thu", schedule);
+    resetHeight();
+});
+
+// ---------------------------------------------next week tabs
+
+nextFriday.addEventListener("click", () => {
+    displayShows("fri", nextSchedule);
+    resetHeight();
+});
+
+nextSaturday.addEventListener("click", () => {
+    displayShows("sat", nextSchedule);
+    resetHeight();
+});
+
+nextSunday.addEventListener("click", () => {
+    displayShows("sun", nextSchedule);
+    resetHeight();
+});
+
+nextMonday.addEventListener("click", () => {
+    displayShows("mon", nextSchedule);
+    resetHeight();
+});
+
+nextTuesday.addEventListener("click", () => {
+    displayShows("tue", nextSchedule);
+    resetHeight();
+});
+
+nextWednesday.addEventListener("click", () => {
+    displayShows("wed", nextSchedule);
+    resetHeight();
+});
+
+nextThursday.addEventListener("click", () => {
+    displayShows("thu", nextSchedule);
     resetHeight();
 });
 
