@@ -237,15 +237,17 @@ tabs.forEach((tab) => {
 
 let scheduleBtn = document.querySelector("[data-schedule-button]");
 let container = document.querySelector("[data-cards-wrapper]");
+let tabsWrap = document.querySelector("[data-tabs-wrap]");
 
 scheduleBtn.addEventListener("click", () => {
-    //remove error message for day with no showtimes
-    document.querySelector("[data-error]").removeAttribute("data-visibility");
+    // when clicked, change the inner text of the schedule button
+    scheduleBtn.innerText = "View Movies By Day";
 
-    // if on mobile, this will close the mobile menu + lightbox
-    mobileMenu.removeAttribute("data-display");
-    lightbox.removeAttribute("data-display");
-    lightboxCloseBtn.removeAttribute("data-visibility");
+    // create header with the date range for the full schedule
+    let fullScheduleHeader = document.createElement("div");
+    fullScheduleHeader.setAttribute("data-schedule-header", null);
+    let fullScheduleTitle = document.createElement("h2");
+    fullScheduleTitle.setAttribute("data-schedule-header-title", null);
 
     // remove all cards in the DOM
     let cards = document.querySelectorAll(".card");
@@ -255,10 +257,86 @@ scheduleBtn.addEventListener("click", () => {
 
     resetHeight();
 
-    // if the container already has the schedule in it, return.
+    // if the container already has the schedule in it -> remove full schedule and create movie cards, then return.
     if (container.querySelectorAll("[data-schedule-movie--wrap]").length > 0) {
+        scheduleBtn.innerText = "View Full Schedule";
+        // if the full schedule of showtimes is displayed -> remove it
+        let fullShowtimes = document.querySelectorAll(
+            "[data-schedule-movie--wrap]"
+        );
+        fullShowtimes.forEach((movie) => {
+            movie.remove();
+        });
+
+        switch (currentDay) {
+            case 0:
+                sunday.setAttribute("data-active", "true");
+                sunday.querySelector(".tab__day").innerText = "TODAY";
+                displayShows("sun", schedule);
+                break;
+
+            case 1:
+                monday.setAttribute("data-active", "true");
+                monday.querySelector(".tab__day").innerText = "TODAY";
+                displayShows("mon", schedule);
+                break;
+
+            case 2:
+                tuesday.setAttribute("data-active", "true");
+                tuesday.querySelector(".tab__day").innerText = "TODAY";
+                displayShows("tue", schedule);
+                break;
+
+            case 3:
+                wednesday.setAttribute("data-active", "true");
+                wednesday.querySelector(".tab__day").innerText = "TODAY";
+                displayShows("wed", schedule);
+                break;
+
+            case 4:
+                thursday.setAttribute("data-active", "true");
+                thursday.querySelector(".tab__day").innerText = "TODAY";
+                displayShows("thu", schedule);
+                break;
+
+            case 5:
+                friday.setAttribute("data-active", "true");
+                friday.querySelector(".tab__day").innerText = "TODAY";
+                displayShows("fri", schedule);
+                break;
+
+            case 6:
+                saturday.setAttribute("data-active", "true");
+                saturday.querySelector(".tab__day").innerText = "TODAY";
+                displayShows("sat", schedule);
+                break;
+        }
+
+        // display tabs
+        document.querySelector("[data-schedule-header]").remove();
+        tabsWrap.removeAttribute("data-visibility");
         return;
     }
+
+    // hide tabs
+    tabsWrap.setAttribute("data-visibility", "hidden");
+
+    fullScheduleTitle.innerText = `Showtimes ${
+        dateRange[0].toString().split(" ")[1]
+    } ${dateRange[0].toString().split(" ")[2]}\u00A0--\u00A0${
+        dateRange[6].toString().split(" ")[1]
+    } ${dateRange[6].toString().split(" ")[2]}`;
+
+    fullScheduleHeader.append(fullScheduleTitle);
+    tabsWrap.append(fullScheduleHeader);
+
+    //remove error message for day with no showtimes
+    document.querySelector("[data-error]").removeAttribute("data-visibility");
+
+    // if on mobile, this will close the mobile menu + lightbox
+    mobileMenu.removeAttribute("data-display");
+    lightbox.removeAttribute("data-display");
+    lightboxCloseBtn.removeAttribute("data-visibility");
 
     // loop through each movie in the schedule object
     for (let movie in schedule) {

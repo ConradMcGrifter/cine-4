@@ -2,6 +2,14 @@
         COMPONENTS -> #schedule
    -------------------------------- */
 
+[data-schedule-header] {
+    text-align: center;
+}
+
+[data-schedule-header-title] {
+    font-weight: 300;
+}
+
 [data-schedule-movie--wrap] {
     & + [data-schedule-movie--wrap] {
         margin-top: 2rem;

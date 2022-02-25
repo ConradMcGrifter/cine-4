@@ -120,6 +120,14 @@ h3 {
   overflow-x: scroll;
 }
 
+.tabs-wrapper[data-visibility="hidden"] {
+  overflow-x: unset;
+}
+
+.tabs-wrapper[data-visibility="hidden"] .wrap {
+  display: none;
+}
+
 .tabs-wrapper .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,6 +665,14 @@ h3 {
 /* --------------------------------
         COMPONENTS -> #schedule
    -------------------------------- */
+[data-schedule-header] {
+  text-align: center;
+}
+
+[data-schedule-header-title] {
+  font-weight: 300;
+}
+
 [data-schedule-movie--wrap] + [data-schedule-movie--wrap] {
   margin-top: 2rem;
 }

@@ -8,6 +8,14 @@
     justify-content: center;
     overflow-x: scroll;
 
+    &[data-visibility="hidden"] {
+        overflow-x: unset;
+    }
+
+    &[data-visibility="hidden"] .wrap {
+        display: none;
+    }
+
     .wrap {
         display: flex;
         min-width: max-content;
