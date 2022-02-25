@@ -4,10 +4,16 @@ import { schedule } from "../../schedule.js";
 
 export function displayShows(day, obj) {
     if (Object.keys(obj).length == 0) {
-        console.log("shee");
-        document.querySelector(".cards-wrapper").innerText =
-            "no showtimes available for this day";
+        document
+            .querySelector("[data-error]")
+            .setAttribute("data-visibility", "visible");
+    } else {
+        //remove error message for day with no showtimes
+        document
+            .querySelector("[data-error]")
+            .removeAttribute("data-visibility");
     }
+
     // remove all cards currently in the DOM
     let cards = document.querySelectorAll(".card");
     cards.forEach((card) => {

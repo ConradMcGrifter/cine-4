@@ -663,4 +663,24 @@ h3 {
 [data-schedule-time] {
   font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
+
+.showtimesUnavailable {
+  border: solid white 1px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4rem;
+}
+
+.showtimesUnavailable[data-visibility="visible"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showtimesUnavailable__title {
+  color: white;
+  font-weight: 300;
+}
 /*# sourceMappingURL=main.css.map */

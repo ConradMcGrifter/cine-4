@@ -1,0 +1,15 @@
+.showtimesUnavailable {
+    border: solid white 1px;
+    display: none;
+    justify-content: center;
+    padding: 4rem;
+
+    &[data-visibility="visible"] {
+        display: flex;
+    }
+}
+
+.showtimesUnavailable__title {
+    color: white;
+    font-weight: 300;
+}
