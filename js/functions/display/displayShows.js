@@ -32,7 +32,7 @@ export function displayShows(day, obj) {
     for (let movie in obj) {
         // if the movie object has show times for the specific day, create card ele + add showtimes
         if (obj[movie].showtimes[day][0] != "") {
-            createMovieCard(movie, day);
+            createMovieCard(movie, day, obj);
             setTrailerSource();
         }
     }

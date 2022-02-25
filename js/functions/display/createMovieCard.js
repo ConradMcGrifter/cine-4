@@ -34,9 +34,9 @@ the schedule object, the day parameter is used to get the specific day from the
 showtimes object in the movie object inside the schedule object
 ex) schedule-->movie1-->showtimes-->fri: ["5:10", "7:30"]
 */
-export const createMovieCard = (movie, day) => {
+export const createMovieCard = (movie, day, obj) => {
     // get the movie obj from the schedule object ex) movie1 or movie2
-    let movieObj = schedule[movie];
+    let movieObj = obj[movie];
 
     // template for the card component
     let movieCardTemplate = document.querySelector("[data-movieCard-template]");
