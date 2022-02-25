@@ -173,7 +173,6 @@ h3 {
 .card__poster {
   width: 100%;
   max-width: 18rem;
-  margin: auto 0;
 }
 
 .cardInfo-wrap {
@@ -220,12 +219,30 @@ h3 {
   font-weight: 300;
 }
 
+.card__synopsisBtn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background: none;
+  border: none;
+  color: lightblue;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
 .card__synopsis {
   font-size: 1.6rem;
   font-family: "Roboto", arial;
   margin-bottom: 1rem;
   line-height: 1.6;
   max-width: 55ch;
+  display: none;
+}
+
+.card__synopsis[data-visibility="visible"] {
+  display: block;
 }
 
 .card__trailer {

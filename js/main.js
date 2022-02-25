@@ -33,6 +33,7 @@ import { nextSchedule } from "./schedules/nextWeekSchedule.js";
 # HAMBURGER MOBILE MENU
   - logic for opening and closing the mobile nav menu
 
+
 *************************************************
 */
 

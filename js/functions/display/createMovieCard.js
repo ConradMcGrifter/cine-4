@@ -54,6 +54,7 @@ export const createMovieCard = (movie, day, obj) => {
     let rating = movieCard.querySelector("[data-rating]");
     let poster = movieCard.querySelector("[data-poster]");
     let synopsis = movieCard.querySelector("[data-synopsis]");
+    let synopsisBtn = movieCard.querySelector("[data-synopsis-btn]");
     let trailer = movieCard.querySelector("[data-trailer]");
     let showtimeHeader = movieCard.querySelector("[data-showtime-header]");
 
@@ -78,7 +79,18 @@ export const createMovieCard = (movie, day, obj) => {
         // -----------------------
     });
 
-    movieCard.setAttribute("data-movie", movie);
+    // event listener for synopsis button -> when clicked display the synopsis
+    synopsisBtn.addEventListener("click", () => {
+        if (synopsis.dataset.visibility == "visible") {
+            synopsis.removeAttribute("data-visibility");
+            synopsisBtn.innerText = "View Synopsis";
+        } else {
+            synopsis.setAttribute("data-visibility", "visible");
+            synopsisBtn.innerText = "Hide Synopsis";
+        }
+    });
+
+    // movieCard.setAttribute("data-movie", movie);
 
     // add the card element inside the cards-wrapper element
     cardWrapper.append(movieCard);

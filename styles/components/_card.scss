@@ -21,7 +21,7 @@
 .card__poster {
     width: 100%;
     max-width: 18rem;
-    margin: auto 0;
+    // margin: auto 0;
 }
 
 // this wraps the title, synopsis, and trailer elements
@@ -56,12 +56,28 @@
     font-weight: 300;
 }
 
+.card__synopsisBtn {
+    width: max-content;
+    background: none;
+    border: none;
+    color: lightblue;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
 .card__synopsis {
     font-size: 1.6rem;
     font-family: $body-fontStack;
     margin-bottom: 1rem;
     line-height: 1.6;
     max-width: 55ch;
+    display: none;
+
+    &[data-visibility="visible"] {
+        display: block;
+    }
 }
 
 .card__trailer {
