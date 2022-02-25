@@ -64,13 +64,11 @@
     font-size: 1.6rem;
     text-decoration: underline;
     cursor: pointer;
-    margin-bottom: 1rem;
 }
 
 .card__synopsis {
     font-size: 1.6rem;
     font-family: $body-fontStack;
-    margin-bottom: 1rem;
     line-height: 1.6;
     max-width: 55ch;
     display: none;
@@ -80,8 +78,8 @@
     }
 }
 
-.card__trailer {
-    margin-top: auto;
+.card__trailerBtn {
+    margin-left: 1rem;
     width: max-content;
     background: none;
     border: none;
@@ -89,6 +87,10 @@
     font-size: 1.6rem;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.synopsisBtn-trailerBtn-wrap {
+    margin-bottom: 1rem;
 }
 
 .cardTimes-wrap {
