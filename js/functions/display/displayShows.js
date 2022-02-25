@@ -1,6 +1,5 @@
 import { createMovieCard } from "./createMovieCard.js";
 import { setTrailerSource } from "./setTrailerSource.js";
-import { schedule } from "../../schedule.js";
 
 export function displayShows(day, obj) {
     // if the nextSchedule object doesnt have any movies -> display error message

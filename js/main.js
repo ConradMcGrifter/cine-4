@@ -1,5 +1,6 @@
 import { displayShows, getDates, resetHeight } from "./functions/index.js";
-import { schedule, nextSchedule } from "./schedule.js";
+import { schedule } from "./schedules/schedule.js";
+import { nextSchedule } from "./schedules/nextWeekSchedule.js";
 
 /*
 
@@ -237,6 +238,9 @@ let scheduleBtn = document.querySelector("[data-schedule-button]");
 let container = document.querySelector("[data-cards-wrapper]");
 
 scheduleBtn.addEventListener("click", () => {
+    //remove error message for day with no showtimes
+    document.querySelector("[data-error]").removeAttribute("data-visibility");
+
     // if on mobile, this will close the mobile menu + lightbox
     mobileMenu.removeAttribute("data-display");
     lightbox.removeAttribute("data-display");
