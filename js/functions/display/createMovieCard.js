@@ -1,3 +1,5 @@
+import { resetHeight } from "../resetHeight.js";
+
 // get the local time then use that time and compare it to the showtimes in each card -> gray out any times that have already passed
 // should this code go into the createMovieCards.js file? or displayShows.js?
 // let localTime = new Date().toLocaleTimeString();
@@ -84,6 +86,7 @@ export const createMovieCard = (movie, day, obj) => {
         if (synopsis.dataset.visibility == "visible") {
             synopsis.removeAttribute("data-visibility");
             synopsisBtn.innerText = "View Synopsis";
+            resetHeight();
         } else {
             synopsis.setAttribute("data-visibility", "visible");
             synopsisBtn.innerText = "Hide Synopsis";
