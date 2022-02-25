@@ -6,7 +6,7 @@ import { schedule, nextSchedule } from "./schedule.js";
 ************** TABLE OF CONTENTS **************
 
 # TABS
-  - these are the tabs for each day of the week
+  - these are the tabs for each day of the current week and the following week
 
 # SET DATES RANGE
   - use the getDates function to get a range of dates between two dates
@@ -19,8 +19,10 @@ import { schedule, nextSchedule } from "./schedule.js";
     it runs when the page first loads
 
 # TAB EVENT LISTENERS
-  - these event listeners Create card elements when specific tab is clicked on by running the displayShows function
-
+  - (these event listeners Create card elements when specific tab is clicked on by running the displayShows function)
+  # CURRENT WEEK
+  # NEXT WEEK
+    
 # SET ACTIVE AND INACTIVE TABS
   - loops through all the tabs and sets them to receive active or inactive styles.
 
@@ -30,11 +32,14 @@ import { schedule, nextSchedule } from "./schedule.js";
 # HAMBURGER MOBILE MENU
   - logic for opening and closing the mobile nav menu
 
+*************************************************
 */
 
 // ------------------# TABS ------------------------------------------
 
-// these are the tabs for each day of the current week
+/*--------------------------------------------
+            CURRENT WEEK TABS
+--------------------------------------------*/
 let friday = document.querySelector("[data-fri]");
 let saturday = document.querySelector("[data-sat]");
 let sunday = document.querySelector("[data-sun]");
@@ -43,7 +48,9 @@ let tuesday = document.querySelector("[data-tue]");
 let wednesday = document.querySelector("[data-wed]");
 let thursday = document.querySelector("[data-thu]");
 
-// next week tabs
+/*--------------------------------------------
+            NEXT WEEK TABS
+--------------------------------------------*/
 let nextFriday = document.querySelector("[data-next-fri]");
 let nextSaturday = document.querySelector("[data-next-sat]");
 let nextSunday = document.querySelector("[data-next-sun]");
@@ -114,6 +121,10 @@ switch (currentDay) {
 }
 // ------------------# TAB EVENT LISTENERS-----------------------------------------------
 
+/*--------------------------------------------
+            CURRENT WEEK
+--------------------------------------------*/
+
 friday.addEventListener("click", () => {
     displayShows("fri", schedule);
     resetHeight();
@@ -149,7 +160,9 @@ thursday.addEventListener("click", () => {
     resetHeight();
 });
 
-// ---------------------------------------------next week tabs
+/*--------------------------------------------
+            NEXT WEEK
+--------------------------------------------*/
 
 nextFriday.addEventListener("click", () => {
     displayShows("fri", nextSchedule);

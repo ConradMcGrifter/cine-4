@@ -1,5 +1,3 @@
-import { schedule } from "../../schedule.js";
-
 // get the local time then use that time and compare it to the showtimes in each card -> gray out any times that have already passed
 // should this code go into the createMovieCards.js file? or displayShows.js?
 // let localTime = new Date().toLocaleTimeString();
@@ -33,6 +31,8 @@ this function creates the card element -> movie parameter takes a movie object f
 the schedule object, the day parameter is used to get the specific day from the 
 showtimes object in the movie object inside the schedule object
 ex) schedule-->movie1-->showtimes-->fri: ["5:10", "7:30"]
+
+the obj paramter takes either the schedule object or nextSchedule object
 */
 export const createMovieCard = (movie, day, obj) => {
     // get the movie obj from the schedule object ex) movie1 or movie2
