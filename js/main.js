@@ -46,7 +46,7 @@ let thursday = document.querySelector("[data-thu]");
 // ------------------# SET DATE RANGE----------------------------------------
 
 // set the start and end date for the week of showtimes
-let dateRange = getDates(new Date(2022, 1, 18), new Date(2022, 1, 24));
+let dateRange = getDates(new Date(2022, 1, 25), new Date(2022, 2, 3));
 // get all the date elements from the DOM
 let dates = document.querySelectorAll("[data-date]");
 // loop through each date and change the innerText to the month and day from the dateRange array

@@ -198,6 +198,7 @@ h3 {
 }
 
 .card__rating {
+  font-size: 1.6rem;
   color: white;
   background: #111111;
   margin-left: 1rem;
