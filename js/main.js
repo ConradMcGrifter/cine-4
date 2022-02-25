@@ -1,4 +1,9 @@
-import { displayShows, getDates, resetHeight } from "./functions/index.js";
+import {
+    displayShows,
+    getDates,
+    resetHeight,
+    displayCurrentDay,
+} from "./functions/index.js";
 import { schedule } from "./schedules/schedule.js";
 import { nextSchedule } from "./schedules/nextWeekSchedule.js";
 
@@ -78,49 +83,8 @@ for (let i = 0; i < dates.length; i++) {
 let d = new Date();
 let currentDay = d.getDay();
 
-switch (currentDay) {
-    case 0:
-        sunday.setAttribute("data-active", "true");
-        sunday.querySelector(".tab__day").innerText = "TODAY";
-        displayShows("sun", schedule);
-        break;
+displayCurrentDay(currentDay);
 
-    case 1:
-        monday.setAttribute("data-active", "true");
-        monday.querySelector(".tab__day").innerText = "TODAY";
-        displayShows("mon", schedule);
-        break;
-
-    case 2:
-        tuesday.setAttribute("data-active", "true");
-        tuesday.querySelector(".tab__day").innerText = "TODAY";
-        displayShows("tue", schedule);
-        break;
-
-    case 3:
-        wednesday.setAttribute("data-active", "true");
-        wednesday.querySelector(".tab__day").innerText = "TODAY";
-        displayShows("wed", schedule);
-        break;
-
-    case 4:
-        thursday.setAttribute("data-active", "true");
-        thursday.querySelector(".tab__day").innerText = "TODAY";
-        displayShows("thu", schedule);
-        break;
-
-    case 5:
-        friday.setAttribute("data-active", "true");
-        friday.querySelector(".tab__day").innerText = "TODAY";
-        displayShows("fri", schedule);
-        break;
-
-    case 6:
-        saturday.setAttribute("data-active", "true");
-        saturday.querySelector(".tab__day").innerText = "TODAY";
-        displayShows("sat", schedule);
-        break;
-}
 // ------------------# TAB EVENT LISTENERS-----------------------------------------------
 
 /*--------------------------------------------
@@ -268,49 +232,7 @@ scheduleBtn.addEventListener("click", () => {
             movie.remove();
         });
 
-        switch (currentDay) {
-            case 0:
-                sunday.setAttribute("data-active", "true");
-                sunday.querySelector(".tab__day").innerText = "TODAY";
-                displayShows("sun", schedule);
-                break;
-
-            case 1:
-                monday.setAttribute("data-active", "true");
-                monday.querySelector(".tab__day").innerText = "TODAY";
-                displayShows("mon", schedule);
-                break;
-
-            case 2:
-                tuesday.setAttribute("data-active", "true");
-                tuesday.querySelector(".tab__day").innerText = "TODAY";
-                displayShows("tue", schedule);
-                break;
-
-            case 3:
-                wednesday.setAttribute("data-active", "true");
-                wednesday.querySelector(".tab__day").innerText = "TODAY";
-                displayShows("wed", schedule);
-                break;
-
-            case 4:
-                thursday.setAttribute("data-active", "true");
-                thursday.querySelector(".tab__day").innerText = "TODAY";
-                displayShows("thu", schedule);
-                break;
-
-            case 5:
-                friday.setAttribute("data-active", "true");
-                friday.querySelector(".tab__day").innerText = "TODAY";
-                displayShows("fri", schedule);
-                break;
-
-            case 6:
-                saturday.setAttribute("data-active", "true");
-                saturday.querySelector(".tab__day").innerText = "TODAY";
-                displayShows("sat", schedule);
-                break;
-        }
+        displayCurrentDay(currentDay);
 
         // display tabs
         document.querySelector("[data-schedule-header]").remove();
