@@ -9,6 +9,7 @@
 -   tab.........................shows the day of the week and the date
 -   lightbox....................this holds the iframe for movie trailers
 -   schedule....................styles for the full schedule that is created and displayed with javaScript
+-   showtimesUnavailable........styles for the error message that displays when a day doesnt have showtimes set yet
 
 # OBJECTS
 

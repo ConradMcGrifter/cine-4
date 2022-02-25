@@ -666,6 +666,9 @@ h3 {
   font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
+/* --------------------------------
+        COMPONENTS -> #showtimesUnavailable
+   -------------------------------- */
 .showtimesUnavailable {
   border: solid white 1px;
   display: none;
