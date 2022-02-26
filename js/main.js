@@ -265,6 +265,9 @@ scheduleBtn.addEventListener("click", () => {
 
     // loop through each movie in the schedule object
     for (let movie in schedule) {
+        // this variable is used to access the days in the dateRange array
+        let dayCounter = 0;
+
         // create the elements
         let movieTitle = document.createElement("h2");
         let movieWrap = document.createElement("div");
@@ -281,17 +284,24 @@ scheduleBtn.addEventListener("click", () => {
 
         // loop through each day in the movie object
         for (let day in schedule[movie].showtimes) {
-            // if the day doesn't have any showtimes -> skip it
+            // if the day doesn't have any showtimes -> increase dayCounter then skip it
             if (schedule[movie].showtimes[day][0] === "") {
+                dayCounter++;
                 continue;
             }
             // create the elements
             let dayWrap = document.createElement("div");
             let weekday = document.createElement("h3");
 
-            // add the content from the schedule movie object into the created elements
-            weekday.innerText = `${day}: `;
+            // add the (month + day) + the day of the week then icrease dayCounter by 1
+            weekday.innerText = `${
+                dateRange[dayCounter].toString().split(" ")[1]
+            } ${
+                dateRange[dayCounter].toString().split(" ")[2]
+            }\u00A0/\u00A0${day}: `;
             dayWrap.append(weekday);
+
+            dayCounter++;
 
             // set data attributes for styling
             weekday.setAttribute("data-schedule-day", null);
