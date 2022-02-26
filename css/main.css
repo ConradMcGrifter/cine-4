@@ -105,7 +105,7 @@ h3 {
           flex-direction: column;
   max-width: 95rem;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 /* -----------------------------------------------------
@@ -118,6 +118,7 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   overflow-x: scroll;
+  margin-bottom: 1rem;
 }
 
 .tabs-wrapper[data-visibility="hidden"] {
@@ -143,7 +144,7 @@ h3 {
 
 @media only screen and (max-width: 600px) {
   .tabs-wrapper {
-    margin-bottom: 1rem;
+    margin-bottom: unset;
     height: 100%;
     max-width: unset;
     width: calc(100vw - 4rem);
@@ -679,10 +680,6 @@ h3 {
 /* --------------------------------
         COMPONENTS -> #schedule
    -------------------------------- */
-[data-schedule-header] {
-  text-align: center;
-}
-
 [data-schedule-header-title] {
   font-weight: 300;
   font-size: clamp(2rem, 3vw, 3rem);
@@ -732,7 +729,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 4rem;
+  padding: 4rem 2rem;
 }
 
 .showtimesUnavailable[data-visibility="visible"] {
@@ -744,10 +741,12 @@ h3 {
 .showtimesUnavailable__title {
   color: white;
   font-weight: 300;
+  font-size: clamp(1.8rem, 2vw, 3rem);
 }
 
 .showtimesUnavailable__subheader {
   font-weight: 300;
   margin-top: 1rem;
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
 }
 /*# sourceMappingURL=main.css.map */
