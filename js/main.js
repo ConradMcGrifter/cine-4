@@ -3,6 +3,8 @@ import {
     getDates,
     resetHeight,
     displayCurrentDay,
+    openMobileMenu,
+    closeMobileMenu,
 } from "./functions/index.js";
 import { schedule } from "./schedules/schedule.js";
 import { nextSchedule } from "./schedules/nextWeekSchedule.js";
@@ -237,8 +239,14 @@ scheduleBtn.addEventListener("click", () => {
         // display tabs
         document.querySelector("[data-schedule-header]").remove();
         tabsWrap.removeAttribute("data-visibility");
+
+        // if on mobile, this will close the mobile menu + lightbox
+        closeMobileMenu();
         return;
     }
+
+    // if on mobile, this will close the mobile menu + lightbox
+    closeMobileMenu();
 
     // hide tabs
     tabsWrap.setAttribute("data-visibility", "hidden");
@@ -254,11 +262,6 @@ scheduleBtn.addEventListener("click", () => {
 
     //remove error message for day with no showtimes
     document.querySelector("[data-error]").removeAttribute("data-visibility");
-
-    // if on mobile, this will close the mobile menu + lightbox
-    mobileMenu.removeAttribute("data-display");
-    lightbox.removeAttribute("data-display");
-    lightboxCloseBtn.removeAttribute("data-visibility");
 
     // loop through each movie in the schedule object
     for (let movie in schedule) {
@@ -317,19 +320,11 @@ scheduleBtn.addEventListener("click", () => {
 
 const hamburger = document.querySelector(".header__hamburger");
 const mobileCloseBtn = document.querySelector(".header__closeBtn");
-const mobileMenu = document.querySelector(".header__links");
-const lightbox = document.querySelector(".lightbox");
-const lightboxCloseBtn = document.querySelector(".lightbox__close");
 
 hamburger.addEventListener("click", () => {
-    mobileMenu.setAttribute("data-display", "visible");
-    lightbox.setAttribute("data-display", "true");
-    // since this uses the same lightbox that the trailers use, the lightbox close button needs to be hidden
-    lightboxCloseBtn.setAttribute("data-visibility", "hidden");
+    openMobileMenu();
 });
 
 mobileCloseBtn.addEventListener("click", () => {
-    mobileMenu.removeAttribute("data-display");
-    lightbox.removeAttribute("data-display");
-    lightboxCloseBtn.removeAttribute("data-visibility");
+    closeMobileMenu();
 });

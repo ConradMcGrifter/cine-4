@@ -16,3 +16,7 @@ update the date range inside getDates.js (from main.js)
 -   setTrailerSource..............gets all the card trailer elements and adds an event listener "on click" -> adds the data-trailer value to the src of the lightbox iframe. also handles toggling the lightbox from active to inactive
 
 -   displayShows................this function uses the setTrailerSource, createMovieCard, and removeCards functions. it takes a parameter to access a specific movie and day in the schedule.js object
+
+-   openAndCloseMobileMenu............ this file has two functions for opening and closing the mobile menu\
+
+-   displayCurrentDay.................this function contains a switch statement for displaying the current days showtimes
