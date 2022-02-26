@@ -234,11 +234,14 @@ scheduleBtn.addEventListener("click", () => {
             movie.remove();
         });
 
-        displayCurrentDay(currentDay);
+        // remove the header for the full schedule
+        document.querySelector("[data-schedule-header]").remove();
 
         // display tabs
-        document.querySelector("[data-schedule-header]").remove();
         tabsWrap.removeAttribute("data-visibility");
+
+        // display the cards for the movies of the current day
+        displayCurrentDay(currentDay);
 
         // if on mobile, this will close the mobile menu + lightbox
         closeMobileMenu();

@@ -19,42 +19,49 @@ export function displayCurrentDay(day) {
         case 0:
             sunday.setAttribute("data-active", "true");
             sunday.querySelector(".tab__day").innerText = "TODAY";
+            sunday.scrollIntoView();
             displayShows("sun", schedule);
             break;
 
         case 1:
             monday.setAttribute("data-active", "true");
             monday.querySelector(".tab__day").innerText = "TODAY";
+            monday.scrollIntoView();
             displayShows("mon", schedule);
             break;
 
         case 2:
             tuesday.setAttribute("data-active", "true");
             tuesday.querySelector(".tab__day").innerText = "TODAY";
+            tuesday.scrollIntoView();
             displayShows("tue", schedule);
             break;
 
         case 3:
             wednesday.setAttribute("data-active", "true");
             wednesday.querySelector(".tab__day").innerText = "TODAY";
+            wednesday.scrollIntoView();
             displayShows("wed", schedule);
             break;
 
         case 4:
             thursday.setAttribute("data-active", "true");
             thursday.querySelector(".tab__day").innerText = "TODAY";
+            thursday.scrollIntoView();
             displayShows("thu", schedule);
             break;
 
         case 5:
             friday.setAttribute("data-active", "true");
             friday.querySelector(".tab__day").innerText = "TODAY";
+            friday.scrollIntoView();
             displayShows("fri", schedule);
             break;
 
         case 6:
             saturday.setAttribute("data-active", "true");
             saturday.querySelector(".tab__day").innerText = "TODAY";
+            saturday.scrollIntoView();
             displayShows("sat", schedule);
             break;
     }
