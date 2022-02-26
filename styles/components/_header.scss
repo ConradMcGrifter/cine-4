@@ -12,6 +12,8 @@
     max-width: $max-width;
     width: 100%;
     display: flex;
+    // display: grid;
+    // grid-template-columns: auto 1fr;
 }
 
 .header__hamburger {
@@ -23,7 +25,6 @@
     flex-direction: column;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 2rem;
     display: none;
     cursor: pointer;
 }
@@ -96,6 +97,9 @@
 
     .header__hamburger {
         display: flex;
+        position: absolute;
+        left: 0;
+        top: 25%;
     }
 
     .header__closeBtn {
@@ -109,5 +113,17 @@
         height: 3rem;
         top: 1rem;
         right: 1rem;
+    }
+
+    .header__nav {
+        position: relative;
+        justify-content: center;
+    }
+    .header__logo {
+        // justify-self: center;
+        text-align: center;
+        span {
+            display: block;
+        }
     }
 }
