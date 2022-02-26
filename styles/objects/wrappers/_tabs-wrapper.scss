@@ -7,6 +7,8 @@
     width: calc(100vw - 4rem);
     justify-content: center;
     overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
     margin-bottom: 1rem;
 
     &[data-visibility="hidden"] {
@@ -23,6 +25,10 @@
         // width: 100%;
         margin-bottom: 1rem;
         justify-content: center;
+    }
+
+    .wrap > * {
+        scroll-snap-align: start;
     }
 }
 

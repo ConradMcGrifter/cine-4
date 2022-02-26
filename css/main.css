@@ -118,6 +118,9 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
   margin-bottom: 1rem;
 }
 
@@ -140,6 +143,10 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.tabs-wrapper .wrap > * {
+  scroll-snap-align: start;
 }
 
 @media only screen and (max-width: 600px) {
