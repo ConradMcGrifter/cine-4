@@ -25,11 +25,6 @@ import { nextSchedule } from "./schedules/nextWeekSchedule.js";
   - this switch statement receives what the current day is as a parameter and sets 
     the active tab based on whatever day it is. then it creates card elements for the specific day
     it runs when the page first loads
-
-# TAB EVENT LISTENERS
-  - (these event listeners Create card elements when specific tab is clicked on by running the displayShows function)
-  # CURRENT WEEK
-  # NEXT WEEK
     
 # SET ACTIVE AND INACTIVE TABS
   - loops through all the tabs and sets them to receive active or inactive styles.
@@ -39,6 +34,11 @@ import { nextSchedule } from "./schedules/nextWeekSchedule.js";
 
 # HAMBURGER MOBILE MENU
   - logic for opening and closing the mobile nav menu
+
+# TAB EVENT LISTENERS
+  - (these event listeners Create card elements when specific tab is clicked on by running the displayShows function)
+  # CURRENT WEEK
+  # NEXT WEEK
 
 
 *************************************************
@@ -86,86 +86,6 @@ let d = new Date();
 let currentDay = d.getDay();
 
 displayCurrentDay(currentDay);
-
-// ------------------# TAB EVENT LISTENERS-----------------------------------------------
-
-/*--------------------------------------------
-            CURRENT WEEK
---------------------------------------------*/
-
-friday.addEventListener("click", () => {
-    displayShows("fri", schedule);
-    resetHeight();
-});
-
-saturday.addEventListener("click", () => {
-    displayShows("sat", schedule);
-    resetHeight();
-});
-
-sunday.addEventListener("click", () => {
-    displayShows("sun", schedule);
-    resetHeight();
-});
-
-monday.addEventListener("click", () => {
-    displayShows("mon", schedule);
-    resetHeight();
-});
-
-tuesday.addEventListener("click", () => {
-    displayShows("tue", schedule);
-    resetHeight();
-});
-
-wednesday.addEventListener("click", () => {
-    displayShows("wed", schedule);
-    resetHeight();
-});
-
-thursday.addEventListener("click", () => {
-    displayShows("thu", schedule);
-    resetHeight();
-});
-
-/*--------------------------------------------
-            NEXT WEEK
---------------------------------------------*/
-
-nextFriday.addEventListener("click", () => {
-    displayShows("fri", nextSchedule);
-    resetHeight();
-});
-
-nextSaturday.addEventListener("click", () => {
-    displayShows("sat", nextSchedule);
-    resetHeight();
-});
-
-nextSunday.addEventListener("click", () => {
-    displayShows("sun", nextSchedule);
-    resetHeight();
-});
-
-nextMonday.addEventListener("click", () => {
-    displayShows("mon", nextSchedule);
-    resetHeight();
-});
-
-nextTuesday.addEventListener("click", () => {
-    displayShows("tue", nextSchedule);
-    resetHeight();
-});
-
-nextWednesday.addEventListener("click", () => {
-    displayShows("wed", nextSchedule);
-    resetHeight();
-});
-
-nextThursday.addEventListener("click", () => {
-    displayShows("thu", nextSchedule);
-    resetHeight();
-});
 
 // ------------------# SET ACTIVE AND INACTIVE TABS---------------------------------------
 
@@ -340,4 +260,84 @@ hamburger.addEventListener("click", () => {
 
 mobileCloseBtn.addEventListener("click", () => {
     closeMobileMenu();
+});
+
+// ------------------# TAB EVENT LISTENERS-----------------------------------------------
+
+/*--------------------------------------------
+            CURRENT WEEK
+--------------------------------------------*/
+
+friday.addEventListener("click", () => {
+    displayShows("fri", schedule);
+    resetHeight();
+});
+
+saturday.addEventListener("click", () => {
+    displayShows("sat", schedule);
+    resetHeight();
+});
+
+sunday.addEventListener("click", () => {
+    displayShows("sun", schedule);
+    resetHeight();
+});
+
+monday.addEventListener("click", () => {
+    displayShows("mon", schedule);
+    resetHeight();
+});
+
+tuesday.addEventListener("click", () => {
+    displayShows("tue", schedule);
+    resetHeight();
+});
+
+wednesday.addEventListener("click", () => {
+    displayShows("wed", schedule);
+    resetHeight();
+});
+
+thursday.addEventListener("click", () => {
+    displayShows("thu", schedule);
+    resetHeight();
+});
+
+/*--------------------------------------------
+            NEXT WEEK
+--------------------------------------------*/
+
+nextFriday.addEventListener("click", () => {
+    displayShows("fri", nextSchedule);
+    resetHeight();
+});
+
+nextSaturday.addEventListener("click", () => {
+    displayShows("sat", nextSchedule);
+    resetHeight();
+});
+
+nextSunday.addEventListener("click", () => {
+    displayShows("sun", nextSchedule);
+    resetHeight();
+});
+
+nextMonday.addEventListener("click", () => {
+    displayShows("mon", nextSchedule);
+    resetHeight();
+});
+
+nextTuesday.addEventListener("click", () => {
+    displayShows("tue", nextSchedule);
+    resetHeight();
+});
+
+nextWednesday.addEventListener("click", () => {
+    displayShows("wed", nextSchedule);
+    resetHeight();
+});
+
+nextThursday.addEventListener("click", () => {
+    displayShows("thu", nextSchedule);
+    resetHeight();
 });
