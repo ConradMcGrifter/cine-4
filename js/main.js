@@ -162,6 +162,15 @@ scheduleBtn.addEventListener("click", () => {
 
         // display the cards for the movies of the current day
         displayCurrentDay(currentDay);
+        // set the date for all the movie card headers back to the current day
+        document
+            .querySelectorAll("[data-showtime-header]")
+            .forEach((header) => {
+                console.log("wtf");
+                header.textContent = `Showtimes ${d.toString().split(" ")[1]} ${
+                    d.toString().split(" ")[2]
+                }`;
+            });
 
         // if on mobile, this will close the mobile menu + lightbox
         closeMobileMenu();
