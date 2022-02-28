@@ -33,6 +33,10 @@
         background-color: color(dateBG-active);
         color: white;
     }
+
+    & + .tab {
+        margin-left: 1rem;
+    }
 }
 
 .tab__day {
@@ -58,8 +62,8 @@
 
 @media only screen and (max-width: 600px) {
     .tab {
-        min-width: unset;
-        width: max-content;
+        min-width: 9rem;
+        // width: max-content;
         // border-radius: 0 $border-radius $border-radius 0;
 
         // & + .tab {
