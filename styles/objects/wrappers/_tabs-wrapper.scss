@@ -4,8 +4,8 @@
 
 .tabs-wrapper {
     max-width: $max-width;
-    width: calc(100vw - 4rem);
-    justify-content: center;
+    // width: calc(100vw - 4rem);
+    width: 100%;
     overflow-x: scroll;
     scrollbar-color: rgb(209, 59, 59) rgb(15, 15, 15);
     scrollbar-width: thin;
@@ -13,6 +13,10 @@
     scroll-behavior: smooth;
     scroll-snap-type: inline mandatory;
     margin-bottom: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
 
     &[data-visibility="hidden"] {
         overflow-x: unset;
@@ -22,15 +26,7 @@
         display: none;
     }
 
-    .wrap {
-        display: flex;
-        min-width: max-content;
-        // width: 100%;
-        margin-bottom: 1rem;
-        justify-content: center;
-    }
-
-    .wrap > * {
+    & > * {
         scroll-snap-align: start;
     }
 
@@ -59,7 +55,7 @@
         height: 100%;
         max-width: unset;
         // the -4 rem is for the padding of the "content" container
-        width: calc(100vw - 4rem);
+        width: 100%;
         overflow-x: scroll;
 
         .wrap {

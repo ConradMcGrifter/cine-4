@@ -55,8 +55,8 @@ h3 {
   display: grid;
   -ms-grid-rows: 10rem 1fr;
       grid-template-rows: 10rem 1fr;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   min-height: 100%;
 }
 
@@ -112,10 +112,7 @@ h3 {
    ----------------------------------------------------- */
 .tabs-wrapper {
   max-width: 95rem;
-  width: calc(100vw - 4rem);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
   overflow-x: scroll;
   scrollbar-color: #d13b3b #0f0f0f;
   scrollbar-width: thin;
@@ -124,6 +121,11 @@ h3 {
   -ms-scroll-snap-type: inline mandatory;
       scroll-snap-type: inline mandatory;
   margin-bottom: 1rem;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .tabs-wrapper[data-visibility="hidden"] {
@@ -134,20 +136,7 @@ h3 {
   display: none;
 }
 
-.tabs-wrapper .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  margin-bottom: 1rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.tabs-wrapper .wrap > * {
+.tabs-wrapper > * {
   scroll-snap-align: start;
 }
 
@@ -170,7 +159,7 @@ h3 {
     margin-bottom: unset;
     height: 100%;
     max-width: unset;
-    width: calc(100vw - 4rem);
+    width: 100%;
     overflow-x: scroll;
   }
   .tabs-wrapper .wrap {
@@ -555,10 +544,6 @@ h3 {
 
 .tab[data-active="false"] {
   display: none;
-}
-
-.tab + .tab {
-  margin-left: 1rem;
 }
 
 .tab:hover {
