@@ -131,7 +131,7 @@ h3 {
   overflow-x: unset;
 }
 
-.tabs-wrapper[data-visibility="hidden"] .wrap {
+.tabs-wrapper[data-visibility="hidden"] > .tab {
   display: none;
 }
 

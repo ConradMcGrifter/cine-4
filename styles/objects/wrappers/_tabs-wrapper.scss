@@ -20,7 +20,7 @@
         overflow-x: unset;
     }
 
-    &[data-visibility="hidden"] .wrap {
+    &[data-visibility="hidden"] > .tab {
         display: none;
     }
 
