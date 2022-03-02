@@ -40,6 +40,9 @@ import { nextSchedule } from "./schedules/nextWeekSchedule.js";
   # CURRENT WEEK
   # NEXT WEEK
 
+# TABS WRAPPER SCROLL
+  - when a tab is partially overflowing the tab wrapper and it is clicked on, this code will scroll the tab into view
+
 
 *************************************************
 */
@@ -351,50 +354,32 @@ nextThursday.addEventListener("click", () => {
     resetHeight();
 });
 
-//--------------------------------------------------
+// ------------------# TABS WRAPPER SCROLL-----------------------------------------------
 
 let tabsWrapper = document.querySelector("[data-tabs-wrap]");
 let weekdayTabs = document.querySelectorAll(".tab");
 
-function moveTab() {
-    let totalTabWidth = 0;
-    console.log("nada", totalTabWidth, tabsWrapper.offsetWidth);
-    for (let i = 0; i < weekdayTabs.length; i++) {
-        if (totalTabWidth > tabsWrapper.offsetWidth) {
-            weekdayTabs[i].removeEventListener("click", consoleTest);
-            break;
-        }
-        totalTabWidth += weekdayTabs[i].offsetWidth + 10;
+function scrollTabIntoView() {
+    let bounding = tabsWrapper.getBoundingClientRect();
+    console.log(this.getBoundingClientRect().left, bounding.left);
+    if (this.getBoundingClientRect().right > bounding.right) {
+        this.scrollIntoView({
+            // behavior: "smooth",
+            inline: "start",
+            block: "nearest",
+        });
+    }
 
-        if (totalTabWidth > tabsWrapper.offsetWidth && this == weekdayTabs[i]) {
-            tabsWrapper.scrollBy(100, 100);
-            console.log("shiet");
-            weekdayTabs[i].removeEventListener("click", consoleTest);
-            break;
-        }
+    if (this.getBoundingClientRect().left < bounding.left) {
+        this.scrollIntoView({
+            behavior: "smooth",
+            inline: "end",
+            block: "nearest",
+        });
+        // tabsWrapper.scrollBy(25, 0);
     }
 }
 
-function consoleTest() {
-    this.scrollIntoView({
-        behavior: "smooth",
-        inline: "end",
-        block: "nearest",
-    });
-}
-
 weekdayTabs.forEach((tab) => {
-    tab.addEventListener("click", consoleTest);
+    tab.addEventListener("click", scrollTabIntoView);
 });
-
-// function consoleTest() {
-// let totalTabWidth = 0;
-// console.log("nada", totalTabWidth, tabsWrapper.offsetWidth);
-// totalTabWidth += weekdayTabs[i].offsetWidth + 10;
-// if (totalTabWidth > tabsWrapper.offsetWidth && this == weekdayTabs[i]) {
-//     this.scrollIntoView({ behavior: "smooth", inline: "center" });
-//     console.log(totalTabWidth, tabsWrapper.offsetWidth);
-//     // weekdayTabs[i].removeEventListener("click", consoleTest);
-//     break;
-// }
-// }
