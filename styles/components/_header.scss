@@ -6,6 +6,7 @@
     // outline: solid red 2px;
     @include flexCenter;
     padding: 2rem;
+    background: rgb(7, 7, 7);
 }
 
 .header__nav {
@@ -23,8 +24,8 @@
     height: 3rem;
     justify-content: space-around;
     flex-direction: column;
-    margin-top: auto;
-    margin-bottom: auto;
+    // margin-top: auto;
+    // margin-bottom: auto;
     display: none;
     cursor: pointer;
 }
@@ -79,7 +80,7 @@
     }
 
     .header__links {
-        background: rgb(24, 24, 24);
+        background: color(timesCardBG);
         position: fixed;
         z-index: 999;
         top: 0;

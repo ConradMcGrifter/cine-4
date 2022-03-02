@@ -34,7 +34,7 @@ body {
   min-height: 100%;
   font-size: 1.8rem;
   font-family: "Roboto", arial;
-  background: #1b1b1b;
+  background: #111111;
   color: #ffffff;
 }
 
@@ -187,6 +187,7 @@ h3 {
   padding: 2rem 1rem;
   -webkit-animation: transitionIn 0.5s ease-in-out;
           animation: transitionIn 0.5s ease-in-out;
+  background: #1b1b1b;
 }
 
 .card + .card {
@@ -388,6 +389,7 @@ h3 {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 2rem;
+  background: #070707;
 }
 
 .header__nav {
@@ -409,8 +411,6 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: auto;
-  margin-bottom: auto;
   display: none;
   cursor: pointer;
 }
@@ -473,7 +473,7 @@ h3 {
     margin-right: auto;
   }
   .header__links {
-    background: #181818;
+    background: #272525;
     position: fixed;
     z-index: 999;
     top: 0;
