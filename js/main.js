@@ -359,29 +359,30 @@ nextThursday.addEventListener("click", () => {
 let tabsWrapper = document.querySelector("[data-tabs-wrap]");
 let weekdayTabs = document.querySelectorAll(".tab");
 
-function scrollTabIntoView() {
-    let bounding = tabsWrapper.getBoundingClientRect();
-
-    if (this.getBoundingClientRect().right > bounding.right) {
-        this.scrollIntoView({
-            // behavior: "smooth",
-            inline: "end",
-            block: "nearest",
-        });
-    }
-
-    if (this.getBoundingClientRect().left < bounding.left) {
-        this.scrollIntoView({
-            // behavior: "smooth",
-            inline: "start",
-            block: "nearest",
-        });
-        // tabsWrapper.scrollBy(25, 0);
-    }
-}
-
+/* add event listener to each tab -> when clicked on, determine if the tab is partially overflowing the tabsWrapper container,
+if it is, scroll it into view when clicked on (so it is no longer partially overflowing)
+*/
 weekdayTabs.forEach((tab) => {
-    tab.addEventListener("click", scrollTabIntoView);
+    tab.addEventListener("click", () => {
+        let bounding = tabsWrapper.getBoundingClientRect();
+
+        if (tab.getBoundingClientRect().right > bounding.right) {
+            tab.scrollIntoView({
+                // behavior: "smooth",
+                inline: "end",
+                block: "nearest",
+            });
+        }
+
+        if (tab.getBoundingClientRect().left < bounding.left) {
+            tab.scrollIntoView({
+                // behavior: "smooth",
+                inline: "start",
+                block: "nearest",
+            });
+            // tabsWrapper.scrollBy(25, 0);
+        }
+    });
 });
 
 // use mousewheel to scroll through the tabs wrapper
