@@ -533,6 +533,9 @@ h3 {
   padding: 1rem;
   min-width: 12rem;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   text-align: center;
   color: black;
   font-weight: 600;
