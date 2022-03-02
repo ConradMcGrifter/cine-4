@@ -372,6 +372,7 @@ weekdayTabs.forEach((tab) => {
                 inline: "end",
                 block: "nearest",
             });
+            tabsWrapper.scrollBy(25, 0);
         }
 
         if (tab.getBoundingClientRect().left < bounding.left) {
@@ -380,7 +381,7 @@ weekdayTabs.forEach((tab) => {
                 inline: "start",
                 block: "nearest",
             });
-            // tabsWrapper.scrollBy(25, 0);
+            tabsWrapper.scrollBy(-25, 0);
         }
     });
 });

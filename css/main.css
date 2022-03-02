@@ -389,7 +389,6 @@ h3 {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 2rem;
-  background: #070707;
 }
 
 .header__nav {
