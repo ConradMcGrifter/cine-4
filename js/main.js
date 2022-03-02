@@ -365,7 +365,7 @@ function scrollTabIntoView() {
     if (this.getBoundingClientRect().right > bounding.right) {
         this.scrollIntoView({
             // behavior: "smooth",
-            inline: "start",
+            inline: "end",
             block: "nearest",
         });
     }
