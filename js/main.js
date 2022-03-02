@@ -361,7 +361,7 @@ let weekdayTabs = document.querySelectorAll(".tab");
 
 function scrollTabIntoView() {
     let bounding = tabsWrapper.getBoundingClientRect();
-    console.log(this.getBoundingClientRect().left, bounding.left);
+
     if (this.getBoundingClientRect().right > bounding.right) {
         this.scrollIntoView({
             // behavior: "smooth",
@@ -382,4 +382,11 @@ function scrollTabIntoView() {
 
 weekdayTabs.forEach((tab) => {
     tab.addEventListener("click", scrollTabIntoView);
+});
+
+// use mousewheel to scroll through the tabs wrapper
+tabsWrapper.addEventListener("wheel", (evt) => {
+    console.log("wheeling");
+    evt.preventDefault();
+    tabsWrapper.scrollLeft += evt.deltaY;
 });
