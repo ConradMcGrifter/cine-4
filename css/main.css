@@ -113,6 +113,9 @@ h3 {
    ----------------------------------------------------- */
 .tabs-wrapper {
   max-width: 95rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   width: 100%;
   overflow-x: scroll;
   scrollbar-color: #d13b3b #0f0f0f;
@@ -137,7 +140,7 @@ h3 {
 }
 
 .tabs-wrapper > * {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 .tabs-wrapper::-webkit-scrollbar {

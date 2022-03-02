@@ -386,7 +386,6 @@ weekdayTabs.forEach((tab) => {
 
 // use mousewheel to scroll through the tabs wrapper
 tabsWrapper.addEventListener("wheel", (evt) => {
-    console.log("wheeling");
     evt.preventDefault();
     tabsWrapper.scrollLeft += evt.deltaY;
 });
