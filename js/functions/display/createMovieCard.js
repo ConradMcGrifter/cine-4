@@ -67,6 +67,7 @@ export const createMovieCard = (movie, day, obj) => {
     synopsis.textContent = movieObj.synopsis;
     trailer.setAttribute("data-trailer", movieObj.trailer);
     showtimeHeader.textContent += showtimeDate;
+    movieCard.style.setProperty("--bg", `url(../${movieObj.poster})`);
 
     // add the showtimes from the movie object to the card element
     movieObj.showtimes[day].forEach((time) => {

@@ -41,6 +41,7 @@
 .card__title {
     font-weight: 300;
     font-size: clamp(2.4rem, 5vw, 3rem);
+    text-shadow: $box-shadow;
 }
 
 .card__rating {
@@ -65,6 +66,7 @@
     font-size: 1.6rem;
     text-decoration: underline;
     cursor: pointer;
+    text-shadow: $box-shadow;
 }
 
 .card__synopsis {
@@ -88,6 +90,7 @@
     font-size: 1.6rem;
     text-decoration: underline;
     cursor: pointer;
+    text-shadow: $box-shadow;
 }
 
 .synopsisBtn-trailerBtn-wrap {
@@ -108,6 +111,7 @@
     font-size: clamp(1.6rem, 3vw, 1.8rem);
     font-weight: 300;
     grid-column: 1 / -1;
+    text-shadow: $box-shadow;
 }
 
 [data-card__time] {
@@ -118,6 +122,7 @@
     text-align: center;
     border-radius: $border-radius;
     font-weight: 600;
+    box-shadow: $box-shadow;
 }
 
 /*
@@ -145,6 +150,22 @@
 
     .card__synopsis {
         display: none;
+    }
+
+    .card {
+        background: linear-gradient(
+                rgba(27, 27, 27, 0.945),
+                rgba(27, 27, 27, 0.945)
+            ),
+            var(--bg, color(cardBG));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cardTimes-wrap {
+        // background: color(mainBG);
+        background: none;
     }
 }
 

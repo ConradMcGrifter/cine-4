@@ -223,6 +223,7 @@ h3 {
 .card__title {
   font-weight: 300;
   font-size: clamp(2.4rem, 5vw, 3rem);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
 }
 
 .card__rating {
@@ -253,6 +254,7 @@ h3 {
   font-size: 1.6rem;
   text-decoration: underline;
   cursor: pointer;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
 }
 
 .card__synopsis {
@@ -278,6 +280,7 @@ h3 {
   font-size: 1.6rem;
   text-decoration: underline;
   cursor: pointer;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
 }
 
 .synopsisBtn-trailerBtn-wrap {
@@ -301,6 +304,7 @@ h3 {
   font-size: clamp(1.6rem, 3vw, 1.8rem);
   font-weight: 300;
   grid-column: 1 / -1;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
 }
 
 [data-card__time] {
@@ -313,6 +317,8 @@ h3 {
   text-align: center;
   border-radius: 0.5rem;
   font-weight: 600;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
 }
 
 /*
@@ -340,6 +346,16 @@ h3 {
   }
   .card__synopsis {
     display: none;
+  }
+  .card {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 27, 27, 0.945)), to(rgba(27, 27, 27, 0.945))), var(--bg, #1b1b1b);
+    background: linear-gradient(rgba(27, 27, 27, 0.945), rgba(27, 27, 27, 0.945)), var(--bg, #1b1b1b);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .cardTimes-wrap {
+    background: none;
   }
 }
 
