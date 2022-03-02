@@ -8,8 +8,8 @@ export let nextSchedule = {
         trailer: "https://www.youtube.com/embed/mqqft2x_Aa4?autoplay=1",
         showtimes: {
             fri: ["4:00p", "7:30p"],
-            sat: ["12:30p", "4:00p", "7:30"],
-            sun: ["12:30p", "4:00p", "7:30"],
+            sat: ["12:30p", "4:00p", "7:30p"],
+            sun: ["12:30p", "4:00p", "7:30p"],
             mon: ["7:30p"],
             tue: ["7:30p"],
             wed: ["7:30p"],

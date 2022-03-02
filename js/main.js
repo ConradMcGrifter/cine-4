@@ -350,3 +350,51 @@ nextThursday.addEventListener("click", () => {
     displayShows("thu", nextSchedule);
     resetHeight();
 });
+
+//--------------------------------------------------
+
+let tabsWrapper = document.querySelector("[data-tabs-wrap]");
+let weekdayTabs = document.querySelectorAll(".tab");
+
+function moveTab() {
+    let totalTabWidth = 0;
+    console.log("nada", totalTabWidth, tabsWrapper.offsetWidth);
+    for (let i = 0; i < weekdayTabs.length; i++) {
+        if (totalTabWidth > tabsWrapper.offsetWidth) {
+            weekdayTabs[i].removeEventListener("click", consoleTest);
+            break;
+        }
+        totalTabWidth += weekdayTabs[i].offsetWidth + 10;
+
+        if (totalTabWidth > tabsWrapper.offsetWidth && this == weekdayTabs[i]) {
+            tabsWrapper.scrollBy(100, 100);
+            console.log("shiet");
+            weekdayTabs[i].removeEventListener("click", consoleTest);
+            break;
+        }
+    }
+}
+
+function consoleTest() {
+    this.scrollIntoView({
+        behavior: "smooth",
+        inline: "end",
+        block: "nearest",
+    });
+}
+
+weekdayTabs.forEach((tab) => {
+    tab.addEventListener("click", consoleTest);
+});
+
+// function consoleTest() {
+// let totalTabWidth = 0;
+// console.log("nada", totalTabWidth, tabsWrapper.offsetWidth);
+// totalTabWidth += weekdayTabs[i].offsetWidth + 10;
+// if (totalTabWidth > tabsWrapper.offsetWidth && this == weekdayTabs[i]) {
+//     this.scrollIntoView({ behavior: "smooth", inline: "center" });
+//     console.log(totalTabWidth, tabsWrapper.offsetWidth);
+//     // weekdayTabs[i].removeEventListener("click", consoleTest);
+//     break;
+// }
+// }
