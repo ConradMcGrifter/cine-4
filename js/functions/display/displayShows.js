@@ -8,7 +8,7 @@ export function displayShows(day, obj) {
             .querySelector("[data-error]")
             .setAttribute("data-visibility", "visible");
     } else {
-        //remove error message for day with no showtimes
+        //remove error message if the object has movies in it
         document
             .querySelector("[data-error]")
             .removeAttribute("data-visibility");
@@ -21,12 +21,11 @@ export function displayShows(day, obj) {
     });
 
     // if the full schedule of showtimes is displayed -> remove it
-    let fullShowtimes = document.querySelectorAll(
-        "[data-schedule-movie--wrap]"
-    );
-    fullShowtimes.forEach((movie) => {
-        movie.remove();
-    });
+    document
+        .querySelectorAll("[data-schedule-movie--wrap]")
+        .forEach((movie) => {
+            movie.remove();
+        });
 
     // loop through the movie objects from the schedule object
     for (let movie in obj) {

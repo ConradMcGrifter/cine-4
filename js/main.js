@@ -105,17 +105,13 @@ tabs.forEach((tab) => {
 
 // loop through all the tabs
 tabs.forEach((tab) => {
-    // if the tab comes before the tab that is set to active on page load by the switch statement -> set its data-active attribute to false
+    // if the tab comes before the tab that is set to active on page load by the switch statement -> remove the tab from the DOM
     if (tabs.indexOf(tab) < currentTabIndex) {
-        // tab.setAttribute("data-active", "false");
         tab.remove();
     }
-    // set active tab styles when a tab is clicked on -> ignore tabs that have data-active="false" (grayed out tabs)
+    // set active tab styles when a tab is clicked on (first loop through all tabs and remove any tab with active styles)
     tab.addEventListener("click", () => {
         for (let i = 0; i < tabs.length; i++) {
-            if (tabs[i].dataset.active == "false") {
-                continue;
-            }
             tabs[i].removeAttribute("data-active");
         }
         tab.setAttribute("data-active", "true");

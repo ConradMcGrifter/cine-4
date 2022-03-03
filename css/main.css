@@ -224,7 +224,7 @@ h3 {
 .card__title {
   font-weight: 300;
   font-size: clamp(2.6rem, 5vw, 3.2rem);
-  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+  text-shadow: 0 3px 15px rgba(10, 10, 10, 0.87);
 }
 
 .card__rating {
@@ -254,7 +254,7 @@ h3 {
   color: lightblue;
   font-size: 1.6rem;
   cursor: pointer;
-  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+  text-shadow: 0 3px 15px rgba(10, 10, 10, 0.87);
   position: relative;
   margin-right: 1rem;
   -webkit-transition: color 0.25s;
@@ -308,7 +308,7 @@ h3 {
   color: lightblue;
   font-size: 1.6rem;
   cursor: pointer;
-  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+  text-shadow: 0 3px 15px rgba(10, 10, 10, 0.87);
   position: relative;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
@@ -361,7 +361,7 @@ h3 {
   font-size: 1.8rem;
   font-weight: 300;
   grid-column: 1 / -1;
-  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+  text-shadow: 0 3px 15px rgba(10, 10, 10, 0.87);
 }
 
 [data-card__time] {
@@ -374,8 +374,8 @@ h3 {
   text-align: center;
   border-radius: 0.5rem;
   font-weight: 600;
-  -webkit-box-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
-          box-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+  -webkit-box-shadow: 0 3px 15px rgba(10, 10, 10, 0.87);
+          box-shadow: 0 3px 15px rgba(10, 10, 10, 0.87);
 }
 
 /*

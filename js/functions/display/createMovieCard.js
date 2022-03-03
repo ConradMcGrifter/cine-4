@@ -37,7 +37,7 @@ ex) schedule-->movie1-->showtimes-->fri: ["5:10", "7:30"]
 the obj paramter takes either the schedule object or nextSchedule object
 */
 export const createMovieCard = (movie, day, obj) => {
-    // get the movie obj from the schedule object ex) movie1 or movie2
+    // get the movie obj from the schedule/nextWeekSchedule object ex) movie1 or movie2
     let movieObj = obj[movie];
 
     // template for the card component
