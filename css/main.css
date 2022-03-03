@@ -188,6 +188,7 @@ h3 {
   -webkit-animation: transitionIn 0.5s ease-in-out;
           animation: transitionIn 0.5s ease-in-out;
   background: #1b1b1b;
+  border-radius: 0.5rem;
 }
 
 .card + .card {
@@ -353,6 +354,7 @@ h3 {
   grid-auto-rows: max-content;
   background-color: #272525;
   width: 100%;
+  border-radius: 0.5rem;
 }
 
 .cardTimes__header {

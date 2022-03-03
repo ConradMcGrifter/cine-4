@@ -10,6 +10,7 @@
     padding: 2rem 1rem;
     animation: transitionIn 0.5s ease-in-out;
     background: color(cardBG);
+    border-radius: $border-radius;
     // &[data-hidden="true"] {
     //     display: none;
     // }
@@ -150,6 +151,7 @@
     grid-auto-rows: max-content;
     background-color: color(timesCardBG);
     width: 100%;
+    border-radius: $border-radius;
 }
 
 .cardTimes__header {
