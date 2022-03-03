@@ -40,7 +40,7 @@
 
 .card__title {
     font-weight: 300;
-    font-size: clamp(2.4rem, 5vw, 3rem);
+    font-size: clamp(2.6rem, 5vw, 3.2rem);
     text-shadow: $box-shadow;
 }
 
@@ -64,9 +64,32 @@
     border: none;
     color: lightblue;
     font-size: 1.6rem;
-    text-decoration: underline;
+    // text-decoration: underline;
     cursor: pointer;
     text-shadow: $box-shadow;
+    position: relative;
+    margin-right: 1rem;
+    transition: color 0.25s;
+
+    &:hover {
+        color: white;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        transform: scaleX(0);
+        width: 100%;
+        background: white;
+        transition: transform 0.25s;
+        height: 0.2rem;
+        bottom: -0.5rem;
+        left: 0;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
 }
 
 .card__synopsis {
@@ -88,9 +111,31 @@
     border: none;
     color: lightblue;
     font-size: 1.6rem;
-    text-decoration: underline;
+    // text-decoration: underline;
     cursor: pointer;
     text-shadow: $box-shadow;
+    position: relative;
+    transition: color 0.25s;
+
+    &:hover {
+        color: white;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        transform: scaleX(0);
+        width: 100%;
+        background: white;
+        transition: transform 0.25s;
+        height: 0.2rem;
+        bottom: -0.5rem;
+        left: 0;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
 }
 
 .synopsisBtn-trailerBtn-wrap {
@@ -108,7 +153,7 @@
 }
 
 .cardTimes__header {
-    font-size: clamp(1.6rem, 3vw, 1.8rem);
+    font-size: 1.8rem;
     font-weight: 300;
     grid-column: 1 / -1;
     text-shadow: $box-shadow;
@@ -136,7 +181,8 @@
         grid-template-columns: auto 1fr;
     }
     .cardTimes-wrap {
-        width: 100%;
+        padding: 2rem;
+        // width: 100%;
         grid-template-columns: repeat(auto-fit, 10rem);
         grid-column: 1 / -1;
         margin-top: 2rem;
@@ -153,6 +199,7 @@
     }
 
     .card {
+        grid-template-columns: 1fr;
         background: linear-gradient(
                 rgba(27, 27, 27, 0.945),
                 rgba(27, 27, 27, 0.945)
@@ -172,7 +219,7 @@
 @media only screen and (max-width: 450px) {
     .cardTimes-wrap {
         // place-content: center;
-        padding: 2rem;
+        // padding: 2rem;
     }
 }
 

@@ -222,8 +222,8 @@ h3 {
 
 .card__title {
   font-weight: 300;
-  font-size: clamp(2.4rem, 5vw, 3rem);
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
+  font-size: clamp(2.6rem, 5vw, 3.2rem);
+  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
 }
 
 .card__rating {
@@ -252,9 +252,37 @@ h3 {
   border: none;
   color: lightblue;
   font-size: 1.6rem;
-  text-decoration: underline;
   cursor: pointer;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
+  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+  position: relative;
+  margin-right: 1rem;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.card__synopsisBtn:hover {
+  color: white;
+}
+
+.card__synopsisBtn::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  width: 100%;
+  background: white;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  height: 0.2rem;
+  bottom: -0.5rem;
+  left: 0;
+}
+
+.card__synopsisBtn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .card__synopsis {
@@ -278,9 +306,36 @@ h3 {
   border: none;
   color: lightblue;
   font-size: 1.6rem;
-  text-decoration: underline;
   cursor: pointer;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
+  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+  position: relative;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.card__trailerBtn:hover {
+  color: white;
+}
+
+.card__trailerBtn::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  width: 100%;
+  background: white;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  height: 0.2rem;
+  bottom: -0.5rem;
+  left: 0;
+}
+
+.card__trailerBtn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .synopsisBtn-trailerBtn-wrap {
@@ -301,10 +356,10 @@ h3 {
 }
 
 .cardTimes__header {
-  font-size: clamp(1.6rem, 3vw, 1.8rem);
+  font-size: 1.8rem;
   font-weight: 300;
   grid-column: 1 / -1;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
+  text-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
 }
 
 [data-card__time] {
@@ -317,8 +372,8 @@ h3 {
   text-align: center;
   border-radius: 0.5rem;
   font-weight: 600;
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
+  -webkit-box-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
+          box-shadow: 0 3px 25px rgba(10, 10, 10, 0.87);
 }
 
 /*
@@ -332,7 +387,7 @@ h3 {
         grid-template-columns: auto 1fr;
   }
   .cardTimes-wrap {
-    width: 100%;
+    padding: 2rem;
     -ms-grid-columns: (10rem)[auto-fit];
         grid-template-columns: repeat(auto-fit, 10rem);
     grid-column: 1 / -1;
@@ -348,6 +403,8 @@ h3 {
     display: none;
   }
   .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 27, 27, 0.945)), to(rgba(27, 27, 27, 0.945))), var(--bg, #1b1b1b);
     background: linear-gradient(rgba(27, 27, 27, 0.945), rgba(27, 27, 27, 0.945)), var(--bg, #1b1b1b);
     background-repeat: no-repeat;
@@ -356,12 +413,6 @@ h3 {
   }
   .cardTimes-wrap {
     background: none;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .cardTimes-wrap {
-    padding: 2rem;
   }
 }
 
