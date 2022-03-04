@@ -74,7 +74,7 @@ let nextThursday = document.querySelector("[data-next-thu]");
 // ------------------# SET DATE RANGE----------------------------------------
 
 // set the start and end date for the week of showtimes
-let dateRange = getDates(new Date(2022, 1, 25), new Date(2022, 2, 10));
+let dateRange = getDates(new Date(2022, 2, 4), new Date(2022, 2, 17));
 // get all the date elements from the DOM
 let dates = document.querySelectorAll("[data-date]");
 // loop through each date and change the innerText to the month and day from the dateRange array
@@ -130,9 +130,9 @@ scheduleBtn.addEventListener("click", () => {
 
     // create header with the date range for the full schedule
     let fullScheduleHeader = document.createElement("div");
-    fullScheduleHeader.setAttribute("data-schedule-header", null);
+    fullScheduleHeader.setAttribute("data-schedule-header", "");
     let fullScheduleTitle = document.createElement("h2");
-    fullScheduleTitle.setAttribute("data-schedule-header-title", null);
+    fullScheduleTitle.setAttribute("data-schedule-header-title", "");
 
     // remove all cards in the DOM
     let cards = document.querySelectorAll(".card");
@@ -207,8 +207,8 @@ scheduleBtn.addEventListener("click", () => {
         movieTitle.innerText = schedule[movie].title;
 
         // add data attribute for styling
-        movieTitle.setAttribute("data-schedule-title", null);
-        movieWrap.setAttribute("data-schedule-movie--wrap", null);
+        movieTitle.setAttribute("data-schedule-title", "");
+        movieWrap.setAttribute("data-schedule-movie--wrap", "");
 
         movieWrap.append(movieTitle);
         container.append(movieWrap);
@@ -235,15 +235,15 @@ scheduleBtn.addEventListener("click", () => {
             dayCounter++;
 
             // set data attributes for styling
-            weekday.setAttribute("data-schedule-day", null);
-            dayWrap.setAttribute("data-schedule-day--wrap", null);
+            weekday.setAttribute("data-schedule-day", "");
+            dayWrap.setAttribute("data-schedule-day--wrap", "");
 
             movieWrap.append(dayWrap);
 
             // loop through all the times
             for (let i = 0; i < schedule[movie].showtimes[day].length; i++) {
                 let time = document.createElement("p");
-                time.setAttribute("data-schedule-time", null);
+                time.setAttribute("data-schedule-time", "");
                 // check if the time is the last one in the array
                 // if it is the last time, dont add an ","
                 if (i + 1 == schedule[movie].showtimes[day].length) {

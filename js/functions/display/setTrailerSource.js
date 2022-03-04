@@ -18,6 +18,7 @@ export function setTrailerSource() {
     cardTrailer.forEach((trailer) => {
         trailer.addEventListener("click", () => {
             lightbox.setAttribute("data-display", "true");
+            // set the iframe src attribute value using the value of the data-trailer attribute
             video.src = `${trailer.dataset.trailer}`;
         });
     });
