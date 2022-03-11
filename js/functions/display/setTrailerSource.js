@@ -15,11 +15,11 @@ export function setTrailerSource() {
     let closeBtn = document.querySelector(".lightbox__close");
     let video = document.querySelector(".lightbox__video");
 
-    cardTrailer.forEach((trailer) => {
-        trailer.addEventListener("click", () => {
+    cardTrailer.forEach((trailerBtn) => {
+        trailerBtn.addEventListener("click", () => {
             lightbox.setAttribute("data-display", "true");
             // set the iframe src attribute value using the value of the data-trailer attribute
-            video.src = `${trailer.dataset.trailer}`;
+            video.src = `${trailerBtn.dataset.trailer}`;
         });
     });
 
