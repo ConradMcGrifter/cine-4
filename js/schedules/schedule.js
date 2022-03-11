@@ -22,24 +22,6 @@ export let schedule = {
     },
 
     movie2: {
-        title: "The Desperate Hour",
-        rating: "R",
-        synopsis:
-            "Unfolding in real time, THE DESPERATE HOUR is a 'riveting and pulse pounding' thriller from award-winning director Phillip Noyce. Recently widowed mother Amy Carr (Academy Award®-nominee Naomi Watts) is doing her best to restore normalcy to the lives of her young daughter and teenage son in their small town. As she's on a jog in the woods, she finds her town thrown into chaos as a shooting takes place at her son's school. Miles away on foot in the dense forest, Amy desperately races against time to save her son.",
-        poster: "posters/desperateHour.jpg",
-        trailer: "https://www.youtube.com/embed/kiwCH84GMhE?autoplay=1",
-        showtimes: {
-            fri: ["4:00p"],
-            sat: ["12:00p", "3:50p"],
-            sun: ["12:00p", "3:50p"],
-            mon: ["7:30p"],
-            tue: [""],
-            wed: ["7:30p"],
-            thu: [""],
-        },
-    },
-
-    movie3: {
         title: "Belfast",
         rating: "R",
         synopsis:
@@ -56,7 +38,7 @@ export let schedule = {
             thu: ["7:30p"],
         },
     },
-    movie4: {
+    movie3: {
         title: "Parallel Mothers",
         rating: "R",
         synopsis:
@@ -64,17 +46,17 @@ export let schedule = {
         poster: "posters/parallelMothers.jpg",
         trailer: "https://www.youtube.com/embed/cL6JDYkRa2g?autoplay=1",
         showtimes: {
-            fri: ["5:30p", "7:30p"],
-            sat: ["1:35p", "5:30p", "7:30p"],
-            sun: ["1:35p", "5:30p", "7:30p"],
-            mon: [""],
+            fri: ["5:10p", "7:30p"],
+            sat: ["12:00p", "2:30p", "5:10p", "7:30p"],
+            sun: ["12:00p", "2:30p", "5:10p", "7:30p"],
+            mon: ["7:30p"],
             tue: ["7:30p"],
-            wed: [""],
+            wed: ["7:30p"],
             thu: ["7:30p"],
         },
     },
 
-    movie5: {
+    movie4: {
         title: "Licorice Pizza",
         rating: "R",
         synopsis:
