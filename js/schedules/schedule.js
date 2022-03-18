@@ -3,6 +3,24 @@ if a movie doesn't have a showtime on a certain day, add an empty string into th
 */
 
 export let schedule = {
+    movie5: {
+        title: "Cyrano",
+        rating: "PG-13",
+        synopsis:
+            "Award-winning director Joe Wright envelops moviegoers in a symphony of emotions with music, romance, and beauty in Cyrano, re-imagining the timeless tale of a heartbreaking love triangle. A man ahead of his time, Cyrano de Bergerac (played by Peter Dinklage) dazzles whether with ferocious wordplay at a verbal joust or with brilliant swordplay in a duel. But, convinced that his appearance renders him unworthy of the love of a devoted friend, the luminous Roxanne (Haley Bennett), Cyrano has yet to declare his feelings for her -- and Roxanne has fallen in love, at first sight, with Christian (Kelvin Harrison, Jr.)",
+        poster: "posters/cyrano.jpg",
+        trailer: "https://www.youtube.com/embed/5e8apSFDXsQ?autoplay=1",
+        showtimes: {
+            fri: ["5:10p", "7:30p"],
+            sat: ["12:00p", "2:30p", "5:10p", "7:30p"],
+            sun: ["12:00p", "2:30p", "5:10p", "7:30p"],
+            mon: ["7:30p"],
+            tue: ["7:30p"],
+            wed: ["7:30p"],
+            thu: ["7:30p"],
+        },
+    },
+
     movie1: {
         title: "The Batman",
         rating: "R",
@@ -29,11 +47,11 @@ export let schedule = {
         poster: "posters/belfastPoster.jpg",
         trailer: "https://www.youtube.com/embed/Ja3PPOnJQ2k?autoplay=1",
         showtimes: {
-            fri: ["5:45p", "7:30p"],
-            sat: ["12:00p", "2:00p", "4:00p", "5:45p", "7:30p"],
-            sun: ["12:00p", "2:00p", "4:00p", "5:45p", "7:30p"],
+            fri: ["4:00p", "5:45p", "7:30p"],
+            sat: ["12:00p", "1:45p", "5:45p", "7:30p"],
+            sun: ["12:00p", "1:45p", "5:45p", "7:30p"],
             mon: ["7:30p"],
-            tue: ["7:30p"],
+            tue: [""],
             wed: ["7:30p"],
             thu: ["7:30p"],
         },
@@ -46,13 +64,13 @@ export let schedule = {
         poster: "posters/parallelMothers.jpg",
         trailer: "https://www.youtube.com/embed/cL6JDYkRa2g?autoplay=1",
         showtimes: {
-            fri: ["5:10p", "7:30p"],
-            sat: ["12:00p", "2:30p", "5:10p", "7:30p"],
-            sun: ["12:00p", "2:30p", "5:10p", "7:30p"],
-            mon: ["7:30p"],
+            fri: ["5:10p"],
+            sat: ["12:00p", "3:30p"],
+            sun: ["12:00p", "3:30p"],
+            mon: [""],
             tue: ["7:30p"],
             wed: ["7:30p"],
-            thu: ["7:30p"],
+            thu: [""],
         },
     },
 
@@ -64,12 +82,12 @@ export let schedule = {
         poster: "posters/licoricePizza.jpg",
         trailer: "https://www.youtube.com/embed/ofnXPwUPENo?autoplay=1",
         showtimes: {
-            fri: ["5:00p", "7:30p"],
-            sat: ["12:00p", "2:30p", "5:00p", "7:30p"],
-            sun: ["12:00p", "2:30p", "5:00p", "7:30p"],
+            fri: ["7:30p"],
+            sat: ["2:15p", "4:45p", "7:30p"],
+            sun: ["2:15p", "4:45p", "7:30p"],
             mon: ["7:30p"],
             tue: ["7:30p"],
-            wed: ["7:30p"],
+            wed: [""],
             thu: ["7:30p"],
         },
     },
